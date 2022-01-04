@@ -38,4 +38,4 @@ Ví dụ, hãy kiểm tra một hình ảnh đơn giản bên dưới:
 
 ![image](https://user-images.githubusercontent.com/81065789/148056593-ed3d0aec-9a97-46db-be4d-7ef4e287ab8c.png)
 
-Ảnh ban đầu cho ta một góc, nhưng ở tỉ lệ lớn hơn, nó lại không phải là một góc.
+Ảnh ban đầu cho ta một góc, nhưng ở tỉ lệ lớn hơn, nó lại không phải là một góc. Đó là lí do SIFT ra đời!
