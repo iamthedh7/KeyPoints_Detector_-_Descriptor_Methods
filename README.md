@@ -32,10 +32,15 @@ Sau đó, chúng ta có thể xem xét điều kiện sau:
 
 ### 2. SIFT:
 
-Với Harris, chúng không thay đổi theo chiều quay, có nghĩa là, ngay cả khi hình ảnh được xoay, chúng ta vẫn có thể tìm thấy các góc giống nhau. Đó là điều hiển nhiên vì các góc cũng vẫn là góc trong hình ảnh xoay. Nhưng trong thực tế, một góc ở tỉ lệ này có thể không phải là một góc ở tỷ lệ khác (nếu hình ảnh được chia tỷ lệ khác nhau). 
+Với Harris, chúng không thay đổi theo chiều quay, có nghĩa là, ngay cả khi hình ảnh được xoay, chúng ta vẫn có thể tìm thấy các góc giống nhau. Đó là điều hiển nhiên vì các góc cũng vẫn là góc trong hình ảnh xoay. Hình minh họa sau với mỗi hình đều có 768 góc thõa mãn:
+
+![harris_threshold100_rotate1](https://user-images.githubusercontent.com/81065789/148065195-7e74cb33-f9b6-4727-90b5-d03992e62547.jpg)
+![harris_threshold100_rotate2](https://user-images.githubusercontent.com/81065789/148065205-4c6f3b56-67e7-4fed-a1be-4902c276886d.jpg)
+
+Nhưng còn đối với phép Scaling thì sao? Ở tỉ lệ này có 1 góc nhưng ở tỷ lệ khác có còn là 1 góc nữa hay không? 
 
 Ví dụ, hãy kiểm tra một hình ảnh đơn giản bên dưới:
 
-![image](https://user-images.githubusercontent.com/81065789/148056593-ed3d0aec-9a97-46db-be4d-7ef4e287ab8c.png)
+![image](https://user-images.githubusercontent.com/81065789/148063926-e5373a0f-92ec-49f0-877e-c70016563d80.png)
 
-Ảnh ban đầu cho ta một góc, nhưng ở tỉ lệ lớn hơn, nó lại không phải là một góc. Đó là lí do SIFT ra đời!
+Ảnh ban đầu cho ta một góc, nhưng ở tỉ lệ lớn hơn, nó lại có nhiều hơn là một góc. Đó là lí do SIFT ra đời!
