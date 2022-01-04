@@ -34,7 +34,7 @@ while (True):
     print('-- Enter a threshold value: ', end='')
     try:
         thresh = int(input())
-        out = detect_corner('E:\Keypoint Detector and Descriptor Methods\langbac.jpg', threshold=thresh)
+        out = detect_corner('images\langbac.jpg', threshold=thresh)
         cv2.imshow('result', out)
         cv2.waitKey()
         cv2.destroyAllWindows()
