@@ -32,7 +32,7 @@ Sau đó, chúng ta có thể xem xét điều kiện sau:
 
 ### 2. SIFT:
 
-Với Harris, chúng không thay đổi theo chiều quay, có nghĩa là, ngay cả khi hình ảnh được xoay, chúng ta vẫn có thể tìm thấy các góc giống nhau. Đó là điều hiển nhiên vì các góc cũng vẫn là góc trong hình ảnh xoay. Hình minh họa sau với mỗi hình đều có 33 góc thõa mãn:
+Với Harris, chúng không thay đổi theo chiều quay, có nghĩa là, ngay cả khi hình ảnh được xoay, chúng ta vẫn có thể tìm thấy các góc giống nhau. Đó là điều hiển nhiên vì các góc cũng vẫn là góc trong hình ảnh xoay. Hình minh họa sau với mỗi hình đều có 33 góc **_(kết quả thực nghiệm)_**:
 
 ![1](https://user-images.githubusercontent.com/81065789/148065886-43e17743-85bb-4073-adf7-b7a7b75e25e7.jpg)
 ![2](https://user-images.githubusercontent.com/81065789/148065896-b450c892-39ea-40b7-aa8b-8c0f9efecfd1.jpg)
@@ -44,3 +44,9 @@ Ví dụ, hãy kiểm tra một hình ảnh đơn giản bên dưới:
 ![image](https://user-images.githubusercontent.com/81065789/148063926-e5373a0f-92ec-49f0-877e-c70016563d80.png)
 
 Ảnh ban đầu cho ta một góc, nhưng ở tỉ lệ lớn hơn, nó lại có nhiều hơn là một góc. Đó là lí do SIFT ra đời!
+
+Với SIFT, 2 hình với 2 tỉ lệ khác nhau sẽ cho ra 1 tập keypoints khác nhau:
+
+![SIFT_big](https://user-images.githubusercontent.com/81065789/148071702-e4c9c9c5-3591-4236-bd3d-38ad1407688e.jpg)
+![SIFT_small](https://user-images.githubusercontent.com/81065789/148071712-d134540f-b60d-432a-8bde-2e1c7c2bad1c.jpg)
+
