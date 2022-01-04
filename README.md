@@ -51,7 +51,8 @@ Với SIFT, 2 hình với 2 tỉ lệ khác nhau sẽ cho ra 1 tập keypoints k
 
 263 keypoints: ![SIFTsmall](https://user-images.githubusercontent.com/81065789/148076069-2b8f9c13-8924-404a-a8a8-c0077d65c433.jpg)
 
-* MATCHING:
+#### * MATCHING:
+
 Ảnh gốc:
 
 1.![book1](https://user-images.githubusercontent.com/81065789/148076657-4a2eb0c5-ae67-4c87-8011-6345430adb66.png)
