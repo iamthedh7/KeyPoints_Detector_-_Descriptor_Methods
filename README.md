@@ -48,5 +48,6 @@ Ví dụ, hãy kiểm tra một hình ảnh đơn giản bên dưới:
 Với SIFT, 2 hình với 2 tỉ lệ khác nhau sẽ cho ra 1 tập keypoints khác nhau:
 
 531 keypoints: ![SIFT_big](https://user-images.githubusercontent.com/81065789/148071702-e4c9c9c5-3591-4236-bd3d-38ad1407688e.jpg)
+
 280 keypoints: ![SIFT_small](https://user-images.githubusercontent.com/81065789/148071712-d134540f-b60d-432a-8bde-2e1c7c2bad1c.jpg)
 
