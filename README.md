@@ -47,7 +47,10 @@ Ví dụ, hãy kiểm tra một hình ảnh đơn giản bên dưới:
 
 Với SIFT, 2 hình với 2 tỉ lệ khác nhau sẽ cho ra 1 tập keypoints khác nhau:
 
-531 keypoints: ![SIFT_big](https://user-images.githubusercontent.com/81065789/148071702-e4c9c9c5-3591-4236-bd3d-38ad1407688e.jpg)
+917 keypoints: ![SIFTbig](https://user-images.githubusercontent.com/81065789/148076055-997693f2-80da-4c3d-9220-e764f42b8de8.jpg)
 
-280 keypoints: ![SIFT_small](https://user-images.githubusercontent.com/81065789/148071712-d134540f-b60d-432a-8bde-2e1c7c2bad1c.jpg)
+263 keypoints: ![SIFTsmall](https://user-images.githubusercontent.com/81065789/148076069-2b8f9c13-8924-404a-a8a8-c0077d65c433.jpg)
 
+Thức hiện Matching các features của 2 ảnh lại với nhau:
+
+![SIFT_matches_50](https://user-images.githubusercontent.com/81065789/148076299-d142ef84-115e-445e-ad23-ec399d3f5e9b.jpg)
