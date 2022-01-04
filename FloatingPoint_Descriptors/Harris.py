@@ -34,7 +34,8 @@ while (True):
     print('-- Enter a threshold value: ', end='')
     try:
         thresh = int(input())
-        out = detect_corner('images\langbac.jpg', threshold=thresh)
+        out = detect_corner('images\\langbac.jpg', threshold=thresh)
+        cv2.imwrite('FloatingPoint_Descriptors\\result\\harris_threshold' + str(thresh) + '.jpg', out)
         cv2.imshow('result', out)
         cv2.waitKey()
         cv2.destroyAllWindows()
