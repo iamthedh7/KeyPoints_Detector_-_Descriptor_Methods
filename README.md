@@ -15,7 +15,7 @@
                           + FREAK
                           + BRIEF
 
-        Dưới đây tôi sẽ không trình bày theo từng nhóm thuật toán mà xin trình bày theo luồng cải tiến thuật toán.
+        Dưới đây tôi sẽ không trình bày theo từng nhóm thuật toán như trên mà xin trình bày theo luồng cải tiến thuật toán.
 
 ## METHOD 1: HARRIS
 
