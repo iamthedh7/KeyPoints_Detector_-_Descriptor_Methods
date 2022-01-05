@@ -1,4 +1,5 @@
-# KEY POINTS DETECTORS & DESCRIPTOR METHODS
+<!-- Title -->
+<h1 align="center"><b>----- KEY POINTS DETECTORS & DESCRIPTOR METHODS -----</b></h1>
 
 ============================================================================================
 
