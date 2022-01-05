@@ -79,7 +79,7 @@ FAST keypoint detector được sử dụng để phát hiện các góc trong h
 
 Hãy cùng xem một ví dụ:
 
-![image](https://user-images.githubusercontent.com/81065789/148164179-d7015297-08e5-4c9a-9e8b-361e03787ae1.png)
+![3](https://user-images.githubusercontent.com/81065789/148164855-90fbdaba-9e20-4b7a-89bc-851a779ed2bb.png)
 
 Ở đây, chúng ta muốn xem xét liệu pixel trung tâm có nên được coi là một điểm then chốt hay không? Ví dụ, pixel trung tâm = 32, để pixel này được coi là một điểm then chốt, nó phải có n = 12 pixel liền kề dọc theo đường biên của vòng tròn có giá trị đều lớn hơn 32 + t hoặc nhỏ hơn 32 - t. Giả sử rằng t = 16 cho ví dụ này.
 
@@ -87,7 +87,7 @@ Như chúng ta có thể thấy, chỉ có 8 pixel liền kề tối hơn (đư�
 
 Một trường hợp khác:
 
-![image](https://user-images.githubusercontent.com/81065789/148164594-47e2b14e-ea5f-4a42-9dc1-5f3177cc5f56.png)
+![4](https://user-images.githubusercontent.com/81065789/148164868-c0765261-0227-40cd-af8a-6d43c9330469.png)
 
 Chúng ta thấy có 14 pixel liền kề nhau và sáng hơn pixel trung tâm. Vì thế, pixel trung tâm này được coi là keypoint.
 
