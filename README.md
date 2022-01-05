@@ -27,6 +27,8 @@ Sau đó, chúng ta có thể xem xét điều kiện sau:
       - Nếu R < 0 thì đây là một cạnh, và đây cũng không phải keypoint
 
       - Nếu |R| lớn thì đây chính là một keypoint
+      
+===================================================================================================
 
 # FLOATING-POINTS DESCRIPTORS (SIFT & SURF)
 
@@ -53,6 +55,8 @@ Với SIFT, 2 hình với 2 tỉ lệ khác nhau sẽ cho ra 1 tập keypoints k
 
 263 keypoints: ![SIFTsmall](https://user-images.githubusercontent.com/81065789/148076069-2b8f9c13-8924-404a-a8a8-c0077d65c433.jpg)
 
+===================================================================================================
+
 ## Method 3: ____________________ SURF ____________________
 
 (NON-FREE ở 2021)
@@ -62,6 +66,8 @@ Chúng ta dùng SIFT để phát hiện và mô tả keypoints nhưng tốc đ�
 Tóm lại, SURF bổ sung rất nhiều tính năng để cải thiện tốc độ trong từng bước thực hiện, do đó nó nhanh hơn SIFT. Phân tích cho thấy nó nhanh hơn _3 lần_ so với SIFT trong khi hiệu suất tương đương với SIFT. SURF xử lý tốt hình ảnh bị mờ và xoay, nhưng không tốt trong việc xử lý thay đổi điểm nhìn và thay đổi độ sáng.
 
 Vì nó không miễn phí trong OpenCV tại thời điểm 2021 nên tôi không thể đánh giá hiệu suất và trình bày kết quả ở đây được. :(
+
+===================================================================================================
 
 ## Method 4: ____________________ FAST ____________________
 
@@ -90,3 +96,5 @@ Chúng ta có thể thấy được là thuật toán bên trên tuy rất đơn
 Kết quả của thuật toán FAST sử dụng hàm cv2.FastFeatureDetector_create mặc định trong OpenCV v4.5.3:
 
 ![FAST_nonmaxSuppression](https://user-images.githubusercontent.com/81065789/148171386-21dac5d3-80d4-4b27-9957-63e4de482c0f.jpg)
+
+===================================================================================================
