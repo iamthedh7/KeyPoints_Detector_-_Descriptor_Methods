@@ -3,13 +3,19 @@
 
 Bài nghiên cứu này bao gồm những thuật toán thuộc các nhóm sau đây:
 
-* **NO DESCRIPTION**
-          **HARRIS**
-          **FAST**
-* **FLOATING-POINTS DESCRIPTORS**
-      * **_____ SIFT**
-      * **_____ SURF**
-* **BINARY DESCRIPTORS**
+**NO DESCRIPTION**
+
+         + HARRIS
+          
+         + FAST
+          
+**FLOATING-POINTS DESCRIPTORS**
+
+         + SIFT
+         
+         + SURF
+         
+**BINARY DESCRIPTORS**
 
 Dưới đây tôi sẽ không trình bày theo từng nhóm thuật toán mà xin trình bày theo luồng cải tiến thuật toán.
 
