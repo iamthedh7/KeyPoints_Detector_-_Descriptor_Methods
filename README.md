@@ -1,25 +1,21 @@
 <!-- Title -->
 <h1 align="center"><b>----- KEY POINTS DETECTORS & DESCRIPTOR METHODS -----</b></h1>
 
-Bài nghiên cứu này bao gồm những thuật toán thuộc các nhóm sau đây:
+        Bài nghiên cứu này bao gồm những thuật toán thuộc các nhóm sau đây:
 
-         * NO DESCRIPTION
-                  + HARRIS
-                  + FAST
+                 * NO DESCRIPTION
+                          + HARRIS
+                          + FAST
+                 * FLOATING-POINTS DESCRIPTORS
+                          + SIFT
+                          + SURF
+                 * BINARY DESCRIPTORS
+                          + ORB
+                          + BRISK
+                          + FREAK
+                          + BRIEF
 
-         * FLOATING-POINTS DESCRIPTORS
-                  + SIFT
-                  + SURF
-         
-         * BINARY DESCRIPTORS
-                  + ORB
-                  + BRISK
-                  + FREAK
-                  + BRIEF
-
-Dưới đây tôi sẽ không trình bày theo từng nhóm thuật toán mà xin trình bày theo luồng cải tiến thuật toán.
-
-============================================================================================
+        Dưới đây tôi sẽ không trình bày theo từng nhóm thuật toán mà xin trình bày theo luồng cải tiến thuật toán.
 
 ## METHOD 1: HARRIS
 
