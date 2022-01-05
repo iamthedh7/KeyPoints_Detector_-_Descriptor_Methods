@@ -1,6 +1,9 @@
 # KEY POINTS DETECTORS & DESCRIPTOR METHODS
 
-## Method 1: ____________________ HARRIS ____________________
+============================================================================================
+
+<!-- Title -->
+<h1 align="center"><b>METHOD 1: HARRIS</b></h1>
 
 Hình bên trái là ảnh gốc, giữa là ảnh biểu thị cường độ Gradient theo chiều x, tiếp theo là biểu thị cường độ Gradient theo chiều y, cuối cùng là biểu thị cường độ Gradient theo cả chiều x và y.
 
@@ -32,9 +35,8 @@ Sau đó, chúng ta có thể xem xét điều kiện sau:
 
 # FLOATING-POINTS DESCRIPTORS (SIFT & SURF)
 
-## Method 2: ____________________ SIFT ____________________ 
-
-(NON-FREE trước kia, nhưng available trên máy local ở 2021)
+<!-- Title -->
+<h1 align="center"><b>METHOD 2: SIFT (NON-FREE trước kia, nhưng có sẵn trên máy local ở 2021)</b></h1>
 
 Với Harris, chúng không thay đổi theo chiều xoay, có nghĩa là, ngay cả khi hình ảnh được xoay, chúng ta vẫn có thể tìm thấy các góc giống nhau. Đó là điều hiển nhiên vì các góc trong hình ảnh xoay cũng vẫn là các góc trong hình ảnh ban đầu, hình sau minh họa cho điều này với mỗi hình đều có 33 góc **_(kết quả thực nghiệm)_**:
 
@@ -57,12 +59,9 @@ Với SIFT, 2 hình với 2 tỉ lệ khác nhau sẽ cho ra 1 tập keypoints k
 
 ============================================================================================
 
-## METHOD 3:_                                SURF
-
-
+<!-- Title -->
+<h1 align="center"><b>METHOD 3: SURF (NON-FREE ở 2021)</b></h1>
                  
-(NON-FREE ở 2021)
-
 Chúng ta dùng SIFT để phát hiện và mô tả keypoints nhưng tốc độ của nó tương đối chậm, người ta cần một phiên bản nâng cấp hơn, vì thế, vào năm 2006, SURF ra đời, cải thiện tốc độ cho SIFT.
 
 Tóm lại, SURF bổ sung rất nhiều tính năng để cải thiện tốc độ trong từng bước thực hiện, do đó nó nhanh hơn SIFT. Phân tích cho thấy nó nhanh hơn _3 lần_ so với SIFT trong khi hiệu suất tương đương với SIFT. SURF xử lý tốt hình ảnh bị mờ và xoay, nhưng không tốt trong việc xử lý thay đổi điểm nhìn và thay đổi độ sáng.
@@ -71,7 +70,8 @@ Vì nó không miễn phí trong OpenCV tại thời điểm 2021 nên tôi khô
 
 ============================================================================================
 
-## Method 4: ____________________ FAST ____________________
+<!-- Title -->
+<h1 align="center"><b>METHOD 4: FAST</b></h1>
 
 FAST keypoint detector được sử dụng để phát hiện các góc trong hình ảnh, được triển khai trong thư viện OpenCV và được áp dụng nhiều nhất cho các ứng dụng thời gian thực hoặc các thiết bị bị hạn chế tài nguyên, nơi không có nhiều thời gian tính toán hoặc sức mạnh để sử dụng các kĩ thuật dò tìm keypoints tiên tiến hơn. 
 
