@@ -39,7 +39,7 @@ Sau đó, chúng ta có thể xem xét điều kiện sau:
 <!-- Title -->
 <h1 align="center"><b>METHOD 2: SIFT</b></h1>
 
-      * (NON-FREE trước kia, nhưng có sẵn trên máy local ở 2021)
+* (NON-FREE trước kia, nhưng có sẵn trên máy local ở 2021)
 
 Với Harris, chúng không thay đổi theo chiều xoay, có nghĩa là, ngay cả khi hình ảnh được xoay, chúng ta vẫn có thể tìm thấy các góc giống nhau. Đó là điều hiển nhiên vì các góc trong hình ảnh xoay cũng vẫn là các góc trong hình ảnh ban đầu, hình sau minh họa cho điều này với mỗi hình đều có 33 góc **_(kết quả thực nghiệm)_**:
 
@@ -63,7 +63,7 @@ Với SIFT, 2 hình với 2 tỉ lệ khác nhau sẽ cho ra 1 tập keypoints k
 <!-- Title -->
 <h1 align="center"><b>METHOD 3: SURF</b></h1>
 
-(NON-FREE ở 2021)
+* (NON-FREE ở 2021)
 
 Chúng ta dùng SIFT để phát hiện và mô tả keypoints nhưng tốc độ của nó tương đối chậm, người ta cần một phiên bản nâng cấp hơn, vì thế, vào năm 2006, SURF ra đời, cải thiện tốc độ cho SIFT.
 
