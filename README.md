@@ -57,9 +57,9 @@ Với SIFT, 2 hình với 2 tỉ lệ khác nhau sẽ cho ra 1 tập keypoints k
 
 ============================================================================================
 
-##                   METHOD 3
+## METHOD 3:                              SURF
 
-|                     SURF                       |
+
                  
 (NON-FREE ở 2021)
 
