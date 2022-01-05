@@ -1,8 +1,8 @@
 # KEY POINTS DETECTORS & DESCRIPTOR METHODS
 
-## A/ FLOATING-POINTS DESCRIPTORS
+# A/ FLOATING-POINTS DESCRIPTORS
 
-### 1. Harris:
+## 1. Harris:
 
 Hình bên trái là ảnh gốc, giữa là ảnh biểu thị cường độ Gradient theo chiều x, tiếp theo là biểu thị cường độ Gradient theo chiều y, cuối cùng là biểu thị cường độ Gradient theo cả chiều x và y.
 
@@ -30,7 +30,7 @@ Sau đó, chúng ta có thể xem xét điều kiện sau:
 
       - Nếu |R| lớn thì đây chính là một keypoint
 
-### 2. SIFT (NON-FREE before, but available in 2021):
+## 2. SIFT (NON-FREE before, but available in 2021):
 
 Với Harris, chúng không thay đổi theo chiều quay, có nghĩa là, ngay cả khi hình ảnh được xoay, chúng ta vẫn có thể tìm thấy các góc giống nhau. Đó là điều hiển nhiên vì các góc cũng vẫn là góc trong hình ảnh xoay. Hình minh họa sau với mỗi hình đều có 33 góc **_(kết quả thực nghiệm)_**:
 
@@ -51,7 +51,7 @@ Với SIFT, 2 hình với 2 tỉ lệ khác nhau sẽ cho ra 1 tập keypoints k
 
 263 keypoints: ![SIFTsmall](https://user-images.githubusercontent.com/81065789/148076069-2b8f9c13-8924-404a-a8a8-c0077d65c433.jpg)
 
-### 3. SURF (NON-FREE in 2021):
+## 3. SURF (NON-FREE in 2021):
 
 Chúng ta dùng SIFT để phát hiện và mô tả keypoints nhưng tốc độ của nó tương đối chậm, người ta cần một phiên bản nâng cấp hơn, vì thế, vào năm 2006, SURF ra đời, cải thiện tốc độ cho SIFT.
 
@@ -59,7 +59,7 @@ Tóm lại, SURF bổ sung rất nhiều tính năng để cải thiện tốc �
 
 Vì nó không miễn phí trong OpenCV tại thời điểm 2021 nên tôi không thể đánh giá hiệu suất và trình bày kết quả ở đây được. :(
 
-### 4. FAST:
+## 4. FAST:
 
 FAST keypoint detector được sử dụng để phát hiện các góc trong hình ảnh, được triển khai trong thư viện OpenCV và được áp dụng nhiều nhất cho các ứng dụng thời gian thực hoặc các thiết bị bị hạn chế tài nguyên, nơi không có nhiều thời gian tính toán hoặc sức mạnh để sử dụng các kĩ thuật dò tìm keypoints tiên tiến hơn. 
 
