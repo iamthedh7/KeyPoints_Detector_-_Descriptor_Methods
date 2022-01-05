@@ -80,3 +80,8 @@ Một trường hợp khác:
 Chúng ta thấy có 14 pixel liền kề nhau và sáng hơn pixel trung tâm. Vì thế, pixel trung tâm này được coi là keypoint.
 
 Chúng ta có thể thấy được là thuật toán bên trên tuy rất đơn giản, nhưng lại được sử dụng rất nhiều trong các ứng dụng Computer Vision hằng ngày cũng như các ứng dụng real-time, đòi hỏi tốc độ tính toán cao. Nhược điểm là nó không mạnh mẽ với mức độ nhiễu cao và phụ thuộc vào một ngưỡng.
+
+Kết quả của thuật toán FAST sử dụng hàm cv2.FastFeatureDetector_create mặc định trong OpenCV v4.5.3:
+
+![FAST_nonmaxSuppression](https://user-images.githubusercontent.com/81065789/148171386-21dac5d3-80d4-4b27-9957-63e4de482c0f.jpg)
+
