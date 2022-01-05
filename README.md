@@ -1,12 +1,17 @@
 <!-- Title -->
 <h1 align="center"><b>----- KEY POINTS DETECTORS & DESCRIPTOR METHODS -----</b></h1>
 
-PHÂN LOẠI NHÓM CÁC THUẬT TOÁN:
+Bài nghiên cứu này bao gồm những thuật toán thuộc các nhóm sau đây:
 
+* **NO DESCRIPTION**
+* **_____ HARRIS**
+* **_____ FAST**
 * **FLOATING-POINTS DESCRIPTORS**
-* **SIFT**
-* **SURF**
+* **_____ SIFT**
+* **_____ SURF**
 * **BINARY DESCRIPTORS**
+
+Dưới đây tôi sẽ không trình bày theo từng nhóm thuật toán mà xin trình bày theo luồng cải tiến thuật toán.
 
 ============================================================================================
 
