@@ -1,6 +1,12 @@
 <!-- Title -->
 <h1 align="center"><b>----- KEY POINTS DETECTORS & DESCRIPTOR METHODS -----</b></h1>
 
+PHÂN LOẠI NHÓM CÁC THUẬT TOÁN:
+
+      ** FLOATING-POINTS DESCRIPTORS **
+      ** * SIFT **
+      ** * SURF **
+
 ============================================================================================
 
 ## METHOD 1: HARRIS
@@ -33,7 +39,6 @@ Sau đó, chúng ta có thể xem xét điều kiện sau:
       
 ============================================================================================
 
-## FLOATING-POINTS DESCRIPTORS
 ## METHOD 2: SIFT (NON-FREE trước kia, nhưng có sẵn trên máy local ở 2021)
 
 Với Harris, chúng không thay đổi theo chiều xoay, có nghĩa là, ngay cả khi hình ảnh được xoay, chúng ta vẫn có thể tìm thấy các góc giống nhau. Đó là điều hiển nhiên vì các góc trong hình ảnh xoay cũng vẫn là các góc trong hình ảnh ban đầu, hình sau minh họa cho điều này với mỗi hình đều có 33 góc **_(kết quả thực nghiệm)_**:
@@ -59,10 +64,9 @@ Chúng ta dùng SIFT để phát hiện và mô tả keypoints nhưng tốc đ�
 
 ============================================================================================
 
-## FLOATING-POINTS DESCRIPTORS
 ## METHOD 3: SURF (NON-FREE ở 2021)
 
-Tóm lại, SURF bổ sung rất nhiều tính năng để cải thiện tốc độ trong từng bước thực hiện, do đó nó nhanh hơn SIFT. Phân tích cho thấy nó nhanh hơn _3 lần_ so với SIFT trong khi hiệu suất tương đương với SIFT. SURF xử lý tốt hình ảnh bị mờ và xoay, nhưng không tốt trong việc xử lý thay đổi điểm nhìn và thay đổi độ sáng.
+SURF bổ sung rất nhiều tính năng để cải thiện tốc độ trong từng bước thực hiện, do đó nó nhanh hơn SIFT. Phân tích cho thấy nó nhanh hơn _3 lần_ so với SIFT trong khi hiệu suất tương đương với SIFT. SURF xử lý tốt hình ảnh bị mờ và xoay, nhưng không tốt trong việc xử lý thay đổi điểm nhìn và thay đổi độ sáng.
 
 Vì nó không miễn phí trong OpenCV tại thời điểm 2021 nên tôi không thể đánh giá hiệu suất và trình bày kết quả ở đây được. :(
 
