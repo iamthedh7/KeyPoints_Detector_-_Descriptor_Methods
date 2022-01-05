@@ -30,7 +30,7 @@ Sau đó, chúng ta có thể xem xét điều kiện sau:
 
       - Nếu |R| lớn thì đây chính là một keypoint
 
-### 2. SIFT:
+### 2. SIFT (NON-FREE before, but available in 2021):
 
 Với Harris, chúng không thay đổi theo chiều quay, có nghĩa là, ngay cả khi hình ảnh được xoay, chúng ta vẫn có thể tìm thấy các góc giống nhau. Đó là điều hiển nhiên vì các góc cũng vẫn là góc trong hình ảnh xoay. Hình minh họa sau với mỗi hình đều có 33 góc **_(kết quả thực nghiệm)_**:
 
@@ -63,9 +63,16 @@ Sau khi trích xuất được các keypoints từ 2 ảnh có độ tương đ�
 
 ![SIFT_matches_50](https://user-images.githubusercontent.com/81065789/148076299-d142ef84-115e-445e-ad23-ec399d3f5e9b.jpg)
 
-### 3. SURF (NON-FREE in 2021 :) ):
+### 3. SURF (NON-FREE in 2021):
 
 Chúng ta dùng SIFT để phát hiện và mô tả keypoints nhưng tốc độ của nó tương đối chậm, người ta cần một phiên bản nâng cấp hơn, vì thế, vào năm 2006, SURF ra đời, cải thiện tốc độ cho SIFT.
 
 Tóm lại, SURF bổ sung rất nhiều tính năng để cải thiện tốc độ trong từng bước thực hiện, do đó nó nhanh hơn SIFT. Phân tích cho thấy nó nhanh hơn _3 lần_ so với SIFT trong khi hiệu suất tương đương với SIFT. SURF xử lý tốt hình ảnh bị mờ và xoay, nhưng không tốt trong việc xử lý thay đổi điểm nhìn và thay đổi độ sáng.
 
+Vì nó không miễn phí trong OpenCV tại thời điểm 2021 nên tôi không thể đánh giá hiệu suất và trình bày kết quả ở đây được. :(
+
+### 4. FAST:
+
+FAST keypoint detector được sử dụng để phát hiện các góc trong hình ảnh, được triển khai trong thư viện OpenCV và được áp dụng nhiều nhất cho các ứng dụng thời gian thực hoặc các thiết bị bị hạn chế tài nguyên, nơi không có nhiều thời gian tính toán hoặc sức mạnh để sử dụng các kĩ thuật dò tìm keypoints tiên tiến hơn.
+
+Ý tưởng của FAST là để một pixel được coi là một góc phải có **ít nhất n** các pixel liền kề dọc theo chu vi hình tròn có bán kính r, **tất cả ** đều sáng hơn hoặc tối hơn pixel trung tâm bởi một ngưỡng t nào đó.
