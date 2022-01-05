@@ -1,7 +1,7 @@
 <!-- Title -->
-<h1 align="center"><b>----- KEY POINTS DETECTORS & DESCRIPTOR METHODS -----</b></h1>
+<h1 align="center"><b>----- KEYPOINTS DETECTORS & DESCRIPTOR METHODS -----</b></h1>
 
-        Bài nghiên cứu này bao gồm những thuật toán thuộc các nhóm sau đây:
+        Bài nghiên cứu này bao gồm những thuật toán tiêu biểu như sau:
 
                  * NO DESCRIPTION
                           + HARRIS
@@ -18,6 +18,8 @@
         Dưới đây tôi sẽ không trình bày theo từng nhóm thuật toán mà xin trình bày theo luồng cải tiến thuật toán.
 
 ## METHOD 1: HARRIS
+
+Harris là một thuật toán phát hiện góc sử dụng trong Thị giác máy tính được giới thiệu lần đầu vào 1988. Kể từ đó, nó đã được cải tiến và áp dụng trong nhiều thuật toán để tiền xử lý hình ảnh cho các ứng dụng tiếp theo. Cùng tìm hiểu xem nó hoạt động như thế nào ?
 
 Hình bên trái là ảnh gốc, giữa là ảnh biểu thị cường độ Gradient theo chiều x, tiếp theo là biểu thị cường độ Gradient theo chiều y, cuối cùng là biểu thị cường độ Gradient theo cả chiều x và y.
 
