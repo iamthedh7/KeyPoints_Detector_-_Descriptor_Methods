@@ -3,9 +3,10 @@
 
 PHÂN LOẠI NHÓM CÁC THUẬT TOÁN:
 
-      ** FLOATING-POINTS DESCRIPTORS **
-      ** * SIFT **
-      ** * SURF **
+* **FLOATING-POINTS DESCRIPTORS**
+* **SIFT**
+* **SURF**
+* **BINARY DESCRIPTORS**
 
 ============================================================================================
 
