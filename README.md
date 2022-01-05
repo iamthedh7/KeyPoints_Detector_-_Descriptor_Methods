@@ -76,3 +76,19 @@ Vì nó không miễn phí trong OpenCV tại thời điểm 2021 nên tôi khô
 FAST keypoint detector được sử dụng để phát hiện các góc trong hình ảnh, được triển khai trong thư viện OpenCV và được áp dụng nhiều nhất cho các ứng dụng thời gian thực hoặc các thiết bị bị hạn chế tài nguyên, nơi không có nhiều thời gian tính toán hoặc sức mạnh để sử dụng các kĩ thuật dò tìm keypoints tiên tiến hơn.
 
 Ý tưởng của FAST là để một pixel được coi là một góc phải có _**ít nhất n**_ các pixel liền kề dọc theo chu vi hình tròn có bán kính r, _**tất cả**_ đều sáng hơn hoặc tối hơn pixel trung tâm bởi một ngưỡng t nào đó.
+
+Hãy cùng xem một ví dụ:
+
+![image](https://user-images.githubusercontent.com/81065789/148164179-d7015297-08e5-4c9a-9e8b-361e03787ae1.png)
+
+Ở đây, chúng ta muốn xem xét liệu pixel trung tâm có nên được coi là một điểm then chốt hay không? Ví dụ, pixel trung tâm = 32, để pixel này được coi là một điểm then chốt, nó phải có n = 12 pixel liền kề dọc theo đường biên của vòng tròn có giá trị đều lớn hơn 32 + t hoặc nhỏ hơn 32 - t. Giả sử rằng t = 16 cho ví dụ này.
+
+Như chúng ta có thể thấy, chỉ có 8 pixel liền kề tối hơn (được đánh dấu bằng hình chữ nhật màu xanh lá cây, tất cả các pixel khác là hình chữ nhật màu đỏ) so với pixel trung tâm - do đó, pixel trung tâm không phải là keypoint
+
+Một trường hợp khác:
+
+![image](https://user-images.githubusercontent.com/81065789/148164594-47e2b14e-ea5f-4a42-9dc1-5f3177cc5f56.png)
+
+Chúng ta thấy có 14 pixel liền kề nhau và sáng hơn pixel trung tâm. Vì thế, pixel trung tâm này được coi là keypoint.
+
+Chúng ta có thể thấy được là thuật toán bên trên tuy rất đơn giản, nhưng lại được sử dung rất nhiều trong các ứng dụng Computer Vision hằng ngày cũng như các ứng dụng real-time, đòi hỏi tốc độ tính toán cao.
