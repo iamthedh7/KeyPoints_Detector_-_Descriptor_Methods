@@ -4,16 +4,16 @@
         Bài nghiên cứu này bao gồm những thuật toán tiêu biểu như sau:
 
                  * NO DESCRIPTION
-                          + HARRIS
-                          + FAST
+                           HARRIS
+                           FAST
                  * FLOATING-POINTS DESCRIPTORS
-                          + SIFT
-                          + SURF
+                           SIFT
+                           SURF
                  * BINARY DESCRIPTORS
-                          + ORB
-                          + BRISK
-                          + FREAK
-                          + BRIEF
+                           ORB
+                           BRISK
+                           FREAK
+                           BRIEF
 
         Dưới đây tôi sẽ không trình bày theo từng nhóm thuật toán như trên mà xin trình bày theo luồng cải tiến thuật toán.
 
