@@ -75,4 +75,4 @@ Vì nó không miễn phí trong OpenCV tại thời điểm 2021 nên tôi khô
 
 FAST keypoint detector được sử dụng để phát hiện các góc trong hình ảnh, được triển khai trong thư viện OpenCV và được áp dụng nhiều nhất cho các ứng dụng thời gian thực hoặc các thiết bị bị hạn chế tài nguyên, nơi không có nhiều thời gian tính toán hoặc sức mạnh để sử dụng các kĩ thuật dò tìm keypoints tiên tiến hơn.
 
-Ý tưởng của FAST là để một pixel được coi là một góc phải có **ít nhất n** các pixel liền kề dọc theo chu vi hình tròn có bán kính r, **tất cả ** đều sáng hơn hoặc tối hơn pixel trung tâm bởi một ngưỡng t nào đó.
+Ý tưởng của FAST là để một pixel được coi là một góc phải có _**ít nhất n**_ các pixel liền kề dọc theo chu vi hình tròn có bán kính r, _**tất cả**_ đều sáng hơn hoặc tối hơn pixel trung tâm bởi một ngưỡng t nào đó.
