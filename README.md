@@ -4,8 +4,8 @@
 Bài nghiên cứu này bao gồm những thuật toán thuộc các nhóm sau đây:
 
 * **NO DESCRIPTION**
-      * **_____ HARRIS**
-      * **_____ FAST**
+          **HARRIS**
+          **FAST**
 * **FLOATING-POINTS DESCRIPTORS**
       * **_____ SIFT**
       * **_____ SURF**
