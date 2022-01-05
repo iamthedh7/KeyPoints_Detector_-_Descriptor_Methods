@@ -3,8 +3,7 @@
 
 ============================================================================================
 
-<!-- Title -->
-<h1 align="center"><b>METHOD 1: HARRIS</b></h1>
+* METHOD 1: HARRIS
 
 Hình bên trái là ảnh gốc, giữa là ảnh biểu thị cường độ Gradient theo chiều x, tiếp theo là biểu thị cường độ Gradient theo chiều y, cuối cùng là biểu thị cường độ Gradient theo cả chiều x và y.
 
@@ -36,10 +35,7 @@ Sau đó, chúng ta có thể xem xét điều kiện sau:
 
 # FLOATING-POINTS DESCRIPTORS (SIFT & SURF)
 
-<!-- Title -->
-<h1 align="center"><b>METHOD 2: SIFT</b></h1>
-
-* (NON-FREE trước kia, nhưng có sẵn trên máy local ở 2021)
+* METHOD 2: SIFT (NON-FREE trước kia, nhưng có sẵn trên máy local ở 2021)
 
 Với Harris, chúng không thay đổi theo chiều xoay, có nghĩa là, ngay cả khi hình ảnh được xoay, chúng ta vẫn có thể tìm thấy các góc giống nhau. Đó là điều hiển nhiên vì các góc trong hình ảnh xoay cũng vẫn là các góc trong hình ảnh ban đầu, hình sau minh họa cho điều này với mỗi hình đều có 33 góc **_(kết quả thực nghiệm)_**:
 
@@ -60,10 +56,9 @@ Với SIFT, 2 hình với 2 tỉ lệ khác nhau sẽ cho ra 1 tập keypoints k
 
 263 keypoints: ![SIFTsmall](https://user-images.githubusercontent.com/81065789/148076069-2b8f9c13-8924-404a-a8a8-c0077d65c433.jpg)
 
-<!-- Title -->
-<h1 align="center"><b>METHOD 3: SURF</b></h1>
+================================
 
-* (NON-FREE ở 2021)
+METHOD 3: SURF (NON-FREE ở 2021)
 
 Chúng ta dùng SIFT để phát hiện và mô tả keypoints nhưng tốc độ của nó tương đối chậm, người ta cần một phiên bản nâng cấp hơn, vì thế, vào năm 2006, SURF ra đời, cải thiện tốc độ cho SIFT.
 
@@ -73,8 +68,7 @@ Vì nó không miễn phí trong OpenCV tại thời điểm 2021 nên tôi khô
 
 ============================================================================================
 
-<!-- Title -->
-<h1 align="center"><b>METHOD 4: FAST</b></h1>
+* METHOD 4: FAST
 
 FAST keypoint detector được sử dụng để phát hiện các góc trong hình ảnh, được triển khai trong thư viện OpenCV và được áp dụng nhiều nhất cho các ứng dụng thời gian thực hoặc các thiết bị bị hạn chế tài nguyên, nơi không có nhiều thời gian tính toán hoặc sức mạnh để sử dụng các kĩ thuật dò tìm keypoints tiên tiến hơn. 
 
