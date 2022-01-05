@@ -56,7 +56,11 @@ Với SIFT, 2 hình với 2 tỉ lệ khác nhau sẽ cho ra 1 tập keypoints k
 
 263 keypoints: ![SIFTsmall](https://user-images.githubusercontent.com/81065789/148076069-2b8f9c13-8924-404a-a8a8-c0077d65c433.jpg)
 
-================================
+
+
+
+
+
 
 ## METHOD 3: SURF (NON-FREE ở 2021)
 
