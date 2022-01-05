@@ -62,3 +62,10 @@ Với SIFT, 2 hình với 2 tỉ lệ khác nhau sẽ cho ra 1 tập keypoints k
 Sau khi trích xuất được các keypoints từ 2 ảnh có độ tương đồng nhau, ta thử thực hiện Matching các features của 2 ảnh lại với nhau:
 
 ![SIFT_matches_50](https://user-images.githubusercontent.com/81065789/148076299-d142ef84-115e-445e-ad23-ec399d3f5e9b.jpg)
+
+### 3. SURF (NON-FREE in 2021 :) ):
+
+Chúng ta dùng SIFT để phát hiện và mô tả keypoints nhưng tốc độ của nó tương đối chậm, người ta cần một phiên bản nâng cấp hơn, vì thế, vào năm 2006, SURF ra đời, cải thiện tốc độ cho SIFT.
+
+Tóm lại, SURF bổ sung rất nhiều tính năng để cải thiện tốc độ trong từng bước thực hiện, do đó nó nhanh hơn SIFT. Phân tích cho thấy nó nhanh hơn _3 lần_ so với SIFT trong khi hiệu suất tương đương với SIFT. SURF xử lý tốt hình ảnh bị mờ và xoay, nhưng không tốt trong việc xử lý thay đổi điểm nhìn và thay đổi độ sáng.
+
