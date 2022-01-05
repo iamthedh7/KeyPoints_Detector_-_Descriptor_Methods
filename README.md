@@ -79,4 +79,4 @@ Một trường hợp khác:
 
 Chúng ta thấy có 14 pixel liền kề nhau và sáng hơn pixel trung tâm. Vì thế, pixel trung tâm này được coi là keypoint.
 
-Chúng ta có thể thấy được là thuật toán bên trên tuy rất đơn giản, nhưng lại được sử dụng rất nhiều trong các ứng dụng Computer Vision hằng ngày cũng như các ứng dụng real-time, đòi hỏi tốc độ tính toán cao.
+Chúng ta có thể thấy được là thuật toán bên trên tuy rất đơn giản, nhưng lại được sử dụng rất nhiều trong các ứng dụng Computer Vision hằng ngày cũng như các ứng dụng real-time, đòi hỏi tốc độ tính toán cao. Nhược điểm là nó không mạnh mẽ với mức độ nhiễu cao và phụ thuộc vào một ngưỡng.
