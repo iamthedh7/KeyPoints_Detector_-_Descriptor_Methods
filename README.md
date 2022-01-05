@@ -4,11 +4,11 @@
 Bài nghiên cứu này bao gồm những thuật toán thuộc các nhóm sau đây:
 
 * **NO DESCRIPTION**
-* **_____ HARRIS**
-* **_____ FAST**
+      * **_____ HARRIS**
+      * **_____ FAST**
 * **FLOATING-POINTS DESCRIPTORS**
-* **_____ SIFT**
-* **_____ SURF**
+      * **_____ SIFT**
+      * **_____ SURF**
 * **BINARY DESCRIPTORS**
 
 Dưới đây tôi sẽ không trình bày theo từng nhóm thuật toán mà xin trình bày theo luồng cải tiến thuật toán.
