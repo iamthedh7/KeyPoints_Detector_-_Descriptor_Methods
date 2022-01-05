@@ -61,7 +61,9 @@ Vì nó không miễn phí trong OpenCV tại thời điểm 2021 nên tôi khô
 
 ### 4. FAST:
 
-FAST keypoint detector được sử dụng để phát hiện các góc trong hình ảnh, được triển khai trong thư viện OpenCV và được áp dụng nhiều nhất cho các ứng dụng thời gian thực hoặc các thiết bị bị hạn chế tài nguyên, nơi không có nhiều thời gian tính toán hoặc sức mạnh để sử dụng các kĩ thuật dò tìm keypoints tiên tiến hơn.
+FAST keypoint detector được sử dụng để phát hiện các góc trong hình ảnh, được triển khai trong thư viện OpenCV và được áp dụng nhiều nhất cho các ứng dụng thời gian thực hoặc các thiết bị bị hạn chế tài nguyên, nơi không có nhiều thời gian tính toán hoặc sức mạnh để sử dụng các kĩ thuật dò tìm keypoints tiên tiến hơn. 
+
+Cụ thể: FAST không tính và lưu trữ ma trận descriptor cho hình ảnh nhứ SIFT và SURF, nên không tốn dung lượng lưu trữ ma trận này, phù hợp cho bộ nhớ của các thiết bị di dộng.
 
 Ý tưởng của FAST là để một pixel được coi là một góc phải có _**ít nhất n**_ các pixel liền kề dọc theo chu vi hình tròn có bán kính r, _**tất cả**_ đều sáng hơn hoặc tối hơn pixel trung tâm bởi một ngưỡng t nào đó.
 
