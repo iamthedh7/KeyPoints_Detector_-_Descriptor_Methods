@@ -10,14 +10,14 @@
                            SIFT
                            SURF
                  * BINARY DESCRIPTORS
-                           ORB
                            BRISK
-                           FREAK
+                           ORB
                            BRIEF
+                           FREAK
 
         Dưới đây tôi sẽ không trình bày theo từng nhóm thuật toán như trên mà xin trình bày theo luồng cải tiến thuật toán.
 
-## METHOD 1: HARRIS
+## METHOD 1: HARRIS 
 
 Harris là một thuật toán phát hiện góc sử dụng trong Thị giác máy tính được giới thiệu lần đầu vào 1988. Kể từ đó, nó đã được cải tiến và áp dụng trong nhiều thuật toán để tiền xử lý hình ảnh cho các ứng dụng tiếp theo. Cùng tìm hiểu xem nó hoạt động như thế nào ?
 
@@ -51,6 +51,8 @@ Sau đó, chúng ta có thể xem xét điều kiện sau:
 
 ## METHOD 2: SIFT (NON-FREE trước kia, nhưng available ở 2021)
 
+* (có bộ mô tả keypoints)
+
 Với Harris, chúng không thay đổi theo chiều xoay, có nghĩa là, ngay cả khi hình ảnh được xoay, chúng ta vẫn có thể tìm thấy các góc giống nhau. Đó là điều hiển nhiên vì các góc trong hình ảnh xoay cũng vẫn là các góc trong hình ảnh ban đầu, hình sau minh họa cho điều này với mỗi hình đều có 33 góc **_(kết quả thực nghiệm)_**:
 
 ![1](https://user-images.githubusercontent.com/81065789/148065886-43e17743-85bb-4073-adf7-b7a7b75e25e7.jpg)
@@ -62,7 +64,7 @@ Ví dụ, hãy kiểm tra một hình ảnh đơn giản bên dưới:
 
 ![image](https://user-images.githubusercontent.com/81065789/148063926-e5373a0f-92ec-49f0-877e-c70016563d80.png)
 
-Ảnh ban đầu cho ta một góc, nhưng ở tỉ lệ lớn hơn, nó lại có nhiều hơn là một góc. Đó là lí do SIFT ra đời (2004)!
+Ảnh ban đầu cho ta một góc, nhưng ở tỉ lệ lớn hơn, nó lại có nhiều hơn là một góc. Đó là lí do SIFT ra đời (1999)!
 
 Với SIFT, 2 hình với 2 tỉ lệ khác nhau sẽ cho ra 1 tập keypoints khác nhau:
 
