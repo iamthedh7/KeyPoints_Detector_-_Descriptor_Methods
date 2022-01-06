@@ -78,6 +78,8 @@ Chúng ta dùng SIFT để phát hiện và mô tả keypoints nhưng tốc đ�
 
 ## METHOD 3: SURF (NON-FREE ở 2021)
 
+* (có bộ mô tả keypoints)
+
 SURF bổ sung rất nhiều tính năng để cải thiện tốc độ trong từng bước thực hiện, do đó nó nhanh hơn SIFT. Phân tích cho thấy nó nhanh hơn _3 lần_ so với SIFT trong khi hiệu suất tương đương với SIFT. SURF xử lý tốt hình ảnh bị mờ và xoay, nhưng không tốt trong việc xử lý thay đổi điểm nhìn và thay đổi độ sáng.
 
 Vì nó không miễn phí trong OpenCV tại thời điểm 2021 nên tôi không thể đánh giá hiệu suất và trình bày kết quả ở đây được. :(
