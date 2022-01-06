@@ -17,7 +17,7 @@
 
         Dưới đây tôi sẽ không trình bày theo từng nhóm thuật toán như trên mà xin trình bày theo luồng cải tiến thuật toán.
 
-## METHOD 1: HARRIS 
+## 1: HARRIS 
 
 * (không có bộ mô tả keypoints)
 
@@ -51,7 +51,7 @@ Sau đó, chúng ta có thể xem xét điều kiện sau:
       
 ============================================================================================
 
-## METHOD 2: SIFT (NON-FREE trước kia, nhưng available ở 2021)
+## 2: SIFT (NON-FREE trước kia, nhưng available ở 2021)
 
 * (có bộ mô tả keypoints)
 
@@ -78,7 +78,7 @@ Chúng ta dùng SIFT để phát hiện và mô tả keypoints nhưng tốc đ�
 
 ============================================================================================
 
-## METHOD 3: SURF (NON-FREE ở 2021)
+## 3: SURF (NON-FREE ở 2021)
 
 * (có bộ mô tả keypoints)
 
@@ -88,7 +88,7 @@ Vì nó không miễn phí trong OpenCV tại thời điểm 2021 nên tôi khô
 
 ============================================================================================
 
-## METHOD 4: FAST
+## 4: FAST
 
 * (không có bộ mô tả keypoints)
 
@@ -119,3 +119,6 @@ Kết quả của thuật toán FAST sử dụng hàm cv2.FastFeatureDetector_cr
 ![FAST_nonmaxSuppression](https://user-images.githubusercontent.com/81065789/148171386-21dac5d3-80d4-4b27-9957-63e4de482c0f.jpg)
 
 ============================================================================================
+
+<!-- Footer -->
+<p align='center'>Copyright © 2021 - Duong Hai Nguyen</p>
