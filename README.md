@@ -1,5 +1,5 @@
 <!-- Title -->
-<h1 align="center"><b>----- KEYPOINTS DETECTORS & DESCRIPTOR METHODS -----</b></h1>
+<h1 align="center"><b>-- KEYPOINTS DETECTORS & DESCRIPTOR METHODS --</b></h1>
 
         Bài nghiên cứu này bao gồm những thuật toán tiêu biểu như sau:
 
