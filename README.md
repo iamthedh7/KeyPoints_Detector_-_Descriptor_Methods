@@ -49,7 +49,7 @@ Sau đó, chúng ta có thể xem xét điều kiện sau:
 
       - Nếu |R| lớn thì đây chính là một keypoint
       
-============================================================================================
+=====================================================================
 
 ## 2: SIFT (NON-FREE trước kia, nhưng available ở 2021)
 
@@ -76,7 +76,7 @@ Với SIFT, 2 hình với 2 tỉ lệ khác nhau sẽ cho ra 1 tập keypoints k
 
 Chúng ta dùng SIFT để phát hiện và mô tả keypoints nhưng tốc độ của nó tương đối chậm, người ta cần một phiên bản nâng cấp hơn, vì thế, vào năm 2006, SURF ra đời, cải thiện tốc độ cho SIFT.
 
-============================================================================================
+=====================================================================
 
 ## 3: SURF (NON-FREE ở 2021)
 
@@ -118,7 +118,7 @@ Kết quả của thuật toán FAST sử dụng hàm cv2.FastFeatureDetector_cr
 
 ![FAST_nonmaxSuppression](https://user-images.githubusercontent.com/81065789/148171386-21dac5d3-80d4-4b27-9957-63e4de482c0f.jpg)
 
-============================================================================================
+=====================================================================
 
 <!-- Footer -->
 <p align='center'>Copyright © 2021 - Duong Hai Nguyen</p>
