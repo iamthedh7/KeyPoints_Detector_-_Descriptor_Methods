@@ -49,7 +49,7 @@ Sau đó, chúng ta có thể xem xét điều kiện sau:
       
 ============================================================================================
 
-## METHOD 2: SIFT (NON-FREE trước kia, nhưng available trên máy local ở 2021)
+## METHOD 2: SIFT (NON-FREE trước kia, nhưng available ở 2021)
 
 Với Harris, chúng không thay đổi theo chiều xoay, có nghĩa là, ngay cả khi hình ảnh được xoay, chúng ta vẫn có thể tìm thấy các góc giống nhau. Đó là điều hiển nhiên vì các góc trong hình ảnh xoay cũng vẫn là các góc trong hình ảnh ban đầu, hình sau minh họa cho điều này với mỗi hình đều có 33 góc **_(kết quả thực nghiệm)_**:
 
