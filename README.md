@@ -10,9 +10,9 @@
                            SIFT
                            SURF
                  * BINARY DESCRIPTORS
-                           BRISK
-                           ORB
                            BRIEF
+                           ORB
+                           BRISK
                            FREAK
 
         Dưới đây tôi sẽ không trình bày theo từng nhóm thuật toán như trên mà xin trình bày theo luồng cải tiến thuật toán.
