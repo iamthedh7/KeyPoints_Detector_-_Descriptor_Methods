@@ -102,9 +102,9 @@ Hãy cùng xem một ví dụ:
 
 ![3](https://user-images.githubusercontent.com/81065789/148164855-90fbdaba-9e20-4b7a-89bc-851a779ed2bb.png)
 
-Ở đây, chúng ta muốn xem xét liệu pixel trung tâm có nên được coi là một điểm then chốt hay không? Ví dụ, pixel trung tâm = 32, để pixel này được coi là một điểm then chốt, nó phải có n = 12 pixel liền kề dọc theo đường biên của vòng tròn có giá trị đều lớn hơn 32 + t hoặc nhỏ hơn 32 - t. Giả sử rằng t = 16 cho ví dụ này.
+Ở đây, chúng ta muốn xem xét liệu pixel trung tâm có nên được coi là một điểm then chốt hay không? Ví dụ: pixel trung tâm = 32, để pixel này được coi là một keypoint, nó phải có n = 12 pixel liền kề dọc theo đường biên của vòng tròn có giá trị đều lớn hơn 32 + t hoặc nhỏ hơn 32 - t. Giả sử rằng t = 16 cho ví dụ này.
 
-Như chúng ta có thể thấy, chỉ có 8 pixel liền kề tối hơn (được đánh dấu bằng hình chữ nhật màu xanh lá cây, tất cả các pixel khác là hình chữ nhật màu đỏ) so với pixel trung tâm - do đó, pixel trung tâm không phải là keypoint
+Như chúng ta có thể thấy, chỉ có 8 pixel liền kề tối hơn (được đánh dấu bằng hình chữ nhật màu xanh lá cây, tất cả các pixel khác là hình chữ nhật màu đỏ) so với pixel trung tâm - do đó, pixel trung tâm không phải là keypoint.
 
 Một trường hợp khác:
 
