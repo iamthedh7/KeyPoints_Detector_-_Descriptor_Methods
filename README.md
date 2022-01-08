@@ -86,7 +86,7 @@ SURF bổ sung rất nhiều tính năng để cải thiện tốc độ trong t
 
 Vì nó không miễn phí trong OpenCV tại thời điểm 2021 nên tôi không thể đánh giá hiệu suất và trình bày kết quả ở đây được. :(
 
-============================================================================================
+=====================================================================
 
 ## 4: FAST
 
