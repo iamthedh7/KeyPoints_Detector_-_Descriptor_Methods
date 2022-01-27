@@ -73,7 +73,7 @@ Chúng ta thấy có 14 pixel liền kề nhau và sáng hơn pixel trung tâm. 
 
 Chúng ta có thể thấy được là thuật toán bên trên tuy rất đơn giản, nhưng lại được sử dụng rất nhiều trong các ứng dụng Computer Vision hằng ngày cũng như các ứng dụng real-time, đòi hỏi tốc độ tính toán cao. Nhược điểm là nó không hiệu quả với mức độ nhiễu cao và có phụ thuộc vào một giá trị ngưỡng.
 
-Kết quả của thuật toán FAST sử dụng hàm cv2.FastFeatureDetector_create mặc định trong OpenCV v4.5.3:
+Hình ảnh qua thuật toán FAST cho kết quả như sau:
 
 ![FAST_nonmaxSuppression](https://user-images.githubusercontent.com/81065789/148171386-21dac5d3-80d4-4b27-9957-63e4de482c0f.jpg)
 
