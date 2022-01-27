@@ -17,7 +17,7 @@
                            FREAK
 
 
-## 1: HARRIS 
+# 1. HARRIS 
 
 Harris là một thuật toán phát hiện góc sử dụng trong Thị giác máy tính được giới thiệu lần đầu vào 1988. Kể từ đó, nó đã được cải tiến và áp dụng trong nhiều thuật toán để tiền xử lý hình ảnh cho các ứng dụng tiếp theo. Cùng tìm hiểu xem nó hoạt động như thế nào ?
 
@@ -49,7 +49,7 @@ Sau đó, chúng ta có thể xem xét điều kiện sau:
       
 =====================================================================
 
-## 2: FAST
+# 2. FAST
 
 FAST keypoint detector được giới thiệu đầu tiên vào 2006, được sử dụng để phát hiện các góc trong hình ảnh, được triển khai trong thư viện OpenCV và được áp dụng nhiều nhất cho các ứng dụng thời gian thực hoặc các thiết bị bị hạn chế tài nguyên, nơi không có nhiều thời gian tính toán hoặc sức mạnh để sử dụng các kĩ thuật dò tìm keypoints tiên tiến hơn. 
 
@@ -79,7 +79,7 @@ Kết quả của thuật toán FAST sử dụng hàm cv2.FastFeatureDetector_cr
 
 =====================================================================
 
-## 4: SIFT (NON-FREE trước kia, nhưng available ở 2021)
+# 4. SIFT (NON-FREE trước kia, nhưng available ở 2021)
 
 Với Harris, chúng không thay đổi theo chiều xoay, có nghĩa là, ngay cả khi hình ảnh được xoay, chúng ta vẫn có thể tìm thấy các góc giống nhau. Đó là điều hiển nhiên vì các góc trong hình ảnh xoay cũng vẫn là các góc trong hình ảnh ban đầu, hình sau minh họa cho điều này với mỗi hình đều có 33 góc **_(kết quả thực nghiệm)_**:
 
@@ -104,7 +104,7 @@ Chúng ta dùng SIFT để phát hiện và mô tả keypoints nhưng tốc đ�
 
 =====================================================================
 
-## 5: SURF (NON-FREE ở 2021)
+# 5. SURF (NON-FREE ở 2021)
 
 SURF bổ sung rất nhiều tính năng để cải thiện tốc độ trong từng bước thực hiện, do đó nó nhanh hơn SIFT. Bộ mô tả của SURF sử dụng 1 vector **64 chiều** thay vì 128 như SIFT. Phân tích cho thấy nó nhanh hơn _3 lần_ so với SIFT trong khi hiệu suất tương đương với SIFT. SURF xử lý tốt hình ảnh bị mờ và xoay, nhưng không tốt trong việc xử lý thay đổi điểm nhìn và thay đổi độ sáng.
 
@@ -112,7 +112,7 @@ Vì nó không miễn phí trong OpenCV tại thời điểm 2021 nên tôi khô
 
 =====================================================================
 
-## 6: BRIEF
+# 6. BRIEF
 
 Như chúng ta đã biết, SIFT sử dụng vector 128 chiều cho các bộ mô tả. Vì nó đang sử dụng số dấu phẩy động, về cơ bản nó cần 512 bytes. Tương tự, SURF cũng chiếm tối thiểu 256 byte (cho vector 64 chiều). Việc tạo một vectơ như vậy cho hàng nghìn "features" sẽ tốn rất nhiều bộ nhớ, điều này không khả thi đối với các ứng dụng hạn chế tài nguyên, đặc biệt là đối với các hệ thống nhúng. Bộ nhớ càng lớn thì thời gian matching càng lâu.
 
