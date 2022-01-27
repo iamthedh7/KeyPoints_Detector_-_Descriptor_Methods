@@ -1,8 +1,6 @@
 <!-- Title -->
 <h1 align="center"><b>-- KEYPOINTS DETECTORS & DESCRIPTOR METHODS --</b></h1>
 
-![format](https://user-images.githubusercontent.com/81065789/151291998-cdcf4be6-4b01-4242-9cbb-32e614c0a9a4.png)
-
 # 1. HARRIS 
 
 Harris là một thuật toán phát hiện góc sử dụng trong Thị giác máy tính được giới thiệu lần đầu vào 1988. Kể từ đó, nó đã được cải tiến và áp dụng trong nhiều thuật toán để tiền xử lý hình ảnh cho các ứng dụng tiếp theo. Cùng tìm hiểu xem nó hoạt động như thế nào ?
@@ -67,6 +65,12 @@ Chúng ta có thể thấy được là thuật toán bên trên tuy rất đơn
 Hình ảnh qua thuật toán FAST cho kết quả như sau:
 
 ![FAST_nonmaxSuppression](https://user-images.githubusercontent.com/81065789/148171386-21dac5d3-80d4-4b27-9957-63e4de482c0f.jpg)
+
+=====================================================================
+
+# 3. STAR
+
+STAR là một bộ dò tính năng có nguồn gốc từ CenSurE. Tuy nhiên, không giống như CenSurE, sử dụng các đa giác như hình vuông, hình lục giác và hình bát giác để tiếp cận một vòng tròn, Star mô phỏng một vòng tròn với 2 hình vuông chồng lên nhau: 1 thẳng đứng và 1 xoay 45 độ. Các đa giác này là hai cấp. Chúng có thể được xem như đa giác với đường viền dày. Các đường viền và khu vực được bao bọc có trọng lượng của các dấu hiệu đối lập. Điều này có các đặc điểm tính toán tốt hơn so với các máy dò không gian quy mô khác và nó có khả năng thực hiện theo thời gian thực. Trái ngược với SIFT và SURF, tìm điểm cực trị ở các pixel được lấy mẫu phụ làm ảnh hưởng đến độ chính xác ở các tỷ lệ lớn hơn, CenSurE tạo ra một vectơ đặc trưng bằng cách sử dụng độ phân giải không gian đầy đủ ở tất cả các tỷ lệ trong kim tự tháp.
 
 =====================================================================
 
