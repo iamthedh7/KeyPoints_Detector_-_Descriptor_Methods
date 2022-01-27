@@ -1,21 +1,7 @@
 <!-- Title -->
 <h1 align="center"><b>-- KEYPOINTS DETECTORS & DESCRIPTOR METHODS --</b></h1>
 
-        Bài nghiên cứu này bao gồm những thuật toán tiêu biểu như sau:
-
-                 * KEYPOINTS DETECTORS
-                           HARRIS
-                           FAST
-                           STAR
-                 * FLOATING-POINTS DESCRIPTORS
-                           SIFT * (có keypoints detector riêng)
-                           SURF * (có keypoints detector riêng)
-                 * BINARY DESCRIPTORS
-                           BRIEF * (dùng FAST keypoints detector)
-                           ORB
-                           BRISK
-                           FREAK
-
+![format](https://user-images.githubusercontent.com/81065789/151291998-cdcf4be6-4b01-4242-9cbb-32e614c0a9a4.png)
 
 # 1. HARRIS 
 
@@ -46,6 +32,11 @@ Sau đó, chúng ta có thể xem xét điều kiện sau:
       - Nếu R < 0 thì đây là một cạnh, và đây cũng không phải keypoint
 
       - Nếu |R| lớn thì đây chính là một keypoint
+      
+Với Harris, ngay cả khi hình ảnh được xoay, chúng ta vẫn có thể tìm thấy các góc giống nhau. Đó là điều hiển nhiên vì các góc trong hình ảnh xoay cũng vẫn là các góc trong hình ảnh ban đầu, hình sau minh họa cho điều này với mỗi hình đều có 33 góc **_(kết quả thực nghiệm)_**:
+
+![1](https://user-images.githubusercontent.com/81065789/148065886-43e17743-85bb-4073-adf7-b7a7b75e25e7.jpg)
+![2](https://user-images.githubusercontent.com/81065789/148065896-b450c892-39ea-40b7-aa8b-8c0f9efecfd1.jpg)
       
 =====================================================================
 
@@ -81,18 +72,13 @@ Hình ảnh qua thuật toán FAST cho kết quả như sau:
 
 # 4. SIFT (NON-FREE trước kia, nhưng available ở 2021)
 
-Với Harris, chúng không thay đổi theo chiều xoay, có nghĩa là, ngay cả khi hình ảnh được xoay, chúng ta vẫn có thể tìm thấy các góc giống nhau. Đó là điều hiển nhiên vì các góc trong hình ảnh xoay cũng vẫn là các góc trong hình ảnh ban đầu, hình sau minh họa cho điều này với mỗi hình đều có 33 góc **_(kết quả thực nghiệm)_**:
-
-![1](https://user-images.githubusercontent.com/81065789/148065886-43e17743-85bb-4073-adf7-b7a7b75e25e7.jpg)
-![2](https://user-images.githubusercontent.com/81065789/148065896-b450c892-39ea-40b7-aa8b-8c0f9efecfd1.jpg)
-
-Nhưng còn đối với phép Scaling thì sao? Ở tỉ lệ này có 1 góc nhưng ở tỷ lệ khác có còn là 1 góc nữa hay không? 
+Với Harris Keypoints Detector, hình ảnh xoay cho ra kết quả tập keypoints y hệt ảnh gốc ban đầu. Nhưng còn đối với phép Scaling thì sao? Ở tỉ lệ này có 1 góc nhưng ở tỷ lệ khác có còn là 1 góc nữa hay không? 
 
 Ví dụ, hãy kiểm tra một hình ảnh đơn giản bên dưới:
 
 ![image](https://user-images.githubusercontent.com/81065789/148063926-e5373a0f-92ec-49f0-877e-c70016563d80.png)
 
-Ảnh ban đầu cho ta một góc, nhưng ở tỉ lệ lớn hơn, nó lại có nhiều hơn là một góc. Đó là lí do SIFT ra đời (1999)!
+Ảnh ban đầu cho ta một góc, nhưng ở tỉ lệ lớn hơn, nó lại có nhiều hơn là một góc. Đó là lí do SIFT Keypoints Detector ra đời (1999)!
 
 Với SIFT, 2 hình với 2 tỉ lệ khác nhau sẽ cho ra 1 tập keypoints khác nhau:
 
