@@ -131,7 +131,7 @@ Việc so sánh giữa hai "Vector đặc trưng nhị phân" cũng rất đơn 
 
 Hình 3: ![image](https://user-images.githubusercontent.com/81065789/152502129-7caf737f-76b2-4c77-942b-ead8f3455a48.png)
 
-Một điểm quan trọng là BRIEF là một bộ mô tả đặc trưng, nó không cung cấp bất kỳ phương pháp nào để tìm các đặc trưng. Vì vậy, bạn sẽ phải sử dụng bất kỳ công cụ dò tính năng nào khác như SIFT, SURF, v.v. Các bài báo khuyến nghị sử dụng CenSurE là một công cụ dò nhanh và BRIEF hoạt động tốt hơn một chút với CenSurE so với các cách khác.
+Một điểm quan trọng là BRIEF là một bộ mô tả đặc trưng, nó không cung cấp bất kỳ phương pháp nào để tìm các đặc trưng. Vì vậy, chúng ta sẽ phải sử dụng bất kỳ công cụ dò tính năng nào khác như SIFT, SURF, v.v. Các bài báo khuyến nghị sử dụng CenSurE là một công cụ dò nhanh và BRIEF hoạt động tốt hơn một chút với CenSurE so với các cách khác.
 
 Kết quả của BRIEF được hiển thị dưới đây:
 
