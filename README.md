@@ -81,7 +81,7 @@ Star Feature Detector có nguồn gốc từ máy dò CenSurE. Trong khi CenSurE
 
 # I. Floating-point Descriptors:
 
-# 4. SIFT (NON-FREE trước kia, nhưng available ở 2021)
+## 4. SIFT (NON-FREE trước kia, nhưng available ở 2021)
 
 Với Harris Keypoints Detector, hình ảnh xoay cho ra kết quả tập keypoints y hệt ảnh gốc ban đầu. Nhưng còn đối với phép Scaling thì sao? Ở tỉ lệ này có 1 góc nhưng ở tỷ lệ khác có còn là 1 góc nữa hay không? 
 
@@ -99,7 +99,7 @@ Với SIFT, 2 hình với 2 tỉ lệ khác nhau sẽ cho ra 1 tập keypoints k
 
 Chúng ta dùng SIFT để phát hiện và mô tả keypoints nhưng tốc độ của nó tương đối chậm vì sử dụng vector **128 chiều** cho bộ mô tả, người ta cần một phiên bản nâng cấp hơn, vì thế, vào năm 2006, SURF ra đời, cải thiện tốc độ cho SIFT.
 
-# 5. SURF (NON-FREE ở 2021)
+## 5. SURF (NON-FREE ở 2021)
 
 SURF bổ sung rất nhiều tính năng để cải thiện tốc độ trong từng bước thực hiện, do đó nó nhanh hơn SIFT. Bộ mô tả của SURF sử dụng 1 vector **64 chiều** thay vì 128 như SIFT. Phân tích cho thấy nó nhanh hơn _3 lần_ so với SIFT trong khi hiệu suất tương đương với SIFT. SURF xử lý tốt hình ảnh bị mờ và xoay, nhưng không tốt trong việc xử lý thay đổi điểm nhìn và thay đổi độ sáng.
 
@@ -107,7 +107,7 @@ Vì nó không miễn phí trong OpenCV tại thời điểm 2021 nên tôi khô
 
 # II. Binary Descriptors:
 
-# 6. BRIEF
+## 6. BRIEF
 
 Như chúng ta đã biết, SIFT sử dụng vector 128 chiều cho các bộ mô tả. Vì nó đang sử dụng số dấu phẩy động, về cơ bản nó cần 512 bytes. Tương tự, SURF cũng chiếm tối thiểu 256 byte (cho vector 64 chiều). Việc tạo một vectơ như vậy cho hàng nghìn "features" sẽ tốn rất nhiều bộ nhớ, điều này không khả thi đối với các ứng dụng hạn chế tài nguyên, đặc biệt là đối với các hệ thống nhúng. Bộ nhớ càng lớn thì thời gian matching càng lâu.
 
