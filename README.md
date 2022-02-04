@@ -5,7 +5,7 @@
 <!-- Title -->
 <h1 align="center"><b>A/ Keypoints Detectors Only</b></h1>
 
-# 1. HARRIS 
+## 1. HARRIS 
 
 Harris là một thuật toán phát hiện góc sử dụng trong Thị giác máy tính được giới thiệu lần đầu vào 1988. Kể từ đó, nó đã được cải tiến và áp dụng trong nhiều thuật toán để tiền xử lý hình ảnh cho các ứng dụng tiếp theo. Cùng tìm hiểu xem nó hoạt động như thế nào ?
 
@@ -40,7 +40,7 @@ Với Harris, ngay cả khi hình ảnh được xoay, chúng ta vẫn có thể
 ![1](https://user-images.githubusercontent.com/81065789/148065886-43e17743-85bb-4073-adf7-b7a7b75e25e7.jpg)
 ![2](https://user-images.githubusercontent.com/81065789/148065896-b450c892-39ea-40b7-aa8b-8c0f9efecfd1.jpg)
 
-# 2. FAST
+## 2. FAST
 
 FAST keypoints detector được giới thiệu đầu tiên vào 2006, được sử dụng để phát hiện các góc trong hình ảnh, được triển khai trong thư viện OpenCV và được áp dụng nhiều nhất cho các ứng dụng thời gian thực hoặc các thiết bị bị hạn chế tài nguyên, nơi không có nhiều thời gian tính toán hoặc sức mạnh để sử dụng các kĩ thuật dò tìm keypoints tiên tiến hơn. 
 
@@ -68,7 +68,7 @@ Hình ảnh qua thuật toán FAST cho kết quả như sau:
 
 ![FAST_nonmaxSuppression](https://user-images.githubusercontent.com/81065789/148171386-21dac5d3-80d4-4b27-9957-63e4de482c0f.jpg)
 
-# 3. STAR
+## 3. STAR
 
 Star Feature Detector có nguồn gốc từ máy dò CenSurE. Trong khi CenSurE sử dụng các đa giác (như hình vuông, hình lục giác và hình bát giác) như một sự thay thế dễ tính toán hơn cho hình tròn, thì Star sử dụng hình tròn tạo bởi 2 hình vuông chồng lên nhau: 1 thẳng đứng và 1 xoay 45 độ. Các đa giác này có thể được xem như là đa giác với đường viền dày. 
 
