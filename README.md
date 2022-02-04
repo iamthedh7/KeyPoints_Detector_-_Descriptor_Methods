@@ -119,7 +119,7 @@ Một điểm quan trọng là BRIEF là một bộ mô tả đặc trưng, nó 
 
 Kết quả của BRIEF được hiển thị dưới đây:
 
-![BRIEF](https://user-images.githubusercontent.com/81065789/152488012-3b231184-dc62-43eb-867f-24ebb9ba3681.jpg)
+235 keypoints: ![BRIEF](https://user-images.githubusercontent.com/81065789/152488012-3b231184-dc62-43eb-867f-24ebb9ba3681.jpg)
 
 <!-- Footer -->
 <p align='center'>Copyright © 2021 - Duong Hai Nguyen</p>
