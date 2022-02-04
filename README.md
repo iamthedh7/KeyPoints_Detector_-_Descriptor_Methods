@@ -39,8 +39,8 @@ Với Harris, ngay cả khi hình ảnh được xoay, chúng ta vẫn có thể
 
 ![1](https://user-images.githubusercontent.com/81065789/148065886-43e17743-85bb-4073-adf7-b7a7b75e25e7.jpg)
 ![2](https://user-images.githubusercontent.com/81065789/148065896-b450c892-39ea-40b7-aa8b-8c0f9efecfd1.jpg)
-      
-=====================================================================
+
+
 
 # 2. FAST
 
@@ -70,7 +70,8 @@ Hình ảnh qua thuật toán FAST cho kết quả như sau:
 
 ![FAST_nonmaxSuppression](https://user-images.githubusercontent.com/81065789/148171386-21dac5d3-80d4-4b27-9957-63e4de482c0f.jpg)
 
-=====================================================================
+
+
 
 # 3. STAR
 
@@ -78,12 +79,9 @@ Star Feature Detector có nguồn gốc từ máy dò CenSurE. Trong khi CenSurE
 
 ![STAR](https://user-images.githubusercontent.com/81065789/152470088-6c5517ee-3985-4ad0-ac74-c176c9b8fc3d.jpg)
 
-=====================================================================
 
 <!-- Title -->
 <h1 align="center"><b>B/ Keypoints Detectors & Descriptors</b></h1>
-
-<!-- Title -->
 <h1 align="center"><b>I/ Floating-point Descriptors</b></h1>
 
 # 4. SIFT (NON-FREE trước kia, nhưng available ở 2021)
