@@ -81,7 +81,7 @@ Star Feature Detector có nguồn gốc từ máy dò CenSurE. Trong khi CenSurE
 
 # I. Floating-point Descriptors:
 
-## 4. SIFT (NON-FREE trước kia, nhưng available ở 2021)
+## 1. SIFT (NON-FREE trước kia, nhưng available ở 2021)
 
 Với Harris Keypoints Detector, hình ảnh xoay cho ra kết quả tập keypoints y hệt ảnh gốc ban đầu. Nhưng còn đối với phép Scaling thì sao? Ở tỉ lệ này có 1 góc nhưng ở tỷ lệ khác có còn là 1 góc nữa hay không? 
 
@@ -99,7 +99,7 @@ Với SIFT, 2 hình với 2 tỉ lệ khác nhau sẽ cho ra 1 tập keypoints k
 
 Chúng ta dùng SIFT để phát hiện và mô tả keypoints nhưng tốc độ của nó tương đối chậm vì sử dụng vector **128 chiều** cho bộ mô tả, người ta cần một phiên bản nâng cấp hơn, vì thế, vào năm 2006, SURF ra đời, cải thiện tốc độ cho SIFT.
 
-## 5. SURF (NON-FREE ở 2021)
+## 2. SURF (NON-FREE ở 2021)
 
 SURF bổ sung rất nhiều tính năng để cải thiện tốc độ trong từng bước thực hiện, do đó nó nhanh hơn SIFT. Bộ mô tả của SURF sử dụng 1 vector **64 chiều** thay vì 128 như SIFT. Phân tích cho thấy nó nhanh hơn _3 lần_ so với SIFT trong khi hiệu suất tương đương với SIFT. SURF xử lý tốt hình ảnh bị mờ và xoay, nhưng không tốt trong việc xử lý thay đổi điểm nhìn và thay đổi độ sáng.
 
@@ -107,23 +107,19 @@ Vì nó không miễn phí trong OpenCV tại thời điểm 2021 nên tôi khô
 
 # II. Binary Descriptors:
 
-## 6. BRIEF
+## 1. BRIEF
 
 Như chúng ta đã biết, SIFT sử dụng số dấu phẩy động nên cần sử dụng vector 128 chiều cho các bộ mô tả, tương đương 512 bytes. Tương tự, SURF cũng chiếm tối thiểu 256 byte (cho vector 64 chiều). Việc tạo một vecto như vậy cho hàng nghìn đặc trưng sẽ tốn rất nhiều bộ nhớ, điều này không khả thi đối với các ứng dụng hạn chế tài nguyên, đặc biệt là đối với các hệ thống nhúng. Bộ nhớ càng lớn thì thời gian matching càng lâu.
 
 Chúng ta có thể sử dụng các phương pháp giảm chiều dữ liệu (PCA, LDA,...) hay các phương pháp băm LSH để chuyển đổi bộ mô tả SIFT từ dạng dấu phẩy động sang dạng chuỗi nhị phân. Các chuỗi nhị phân này được sử dụng để so khớp các đặc trưng bằng cách sử dụng khoảng cách Hamming, điều này giúp tăng tốc độ tốt hơn. Nhưng với cách này, trước tiên chúng ta cần tìm các bộ mô tả, sau đó áp dụng các phương pháp băm, và điều này không giải quyết được vấn đề ban đầu của chúng ta về bộ nhớ.
 
-BRIEF đi vào hình ảnh ngay lúc này. Nó cung cấp một lối tắt để tìm các chuỗi nhị phân trực tiếp mà không cần tìm bộ mô tả. Nó có bản vá hình ảnh mượt mà và chọn một tập hợp 
-n[i](x, y) các cặp vị trí theo một cách độc nhất. Sau đó, một số so sánh cường độ pixel được thực hiện trên các cặp vị trí này. 
+BRIEF đi vào hình ảnh ngay lúc này. Nó cung cấp một lối tắt để tìm các chuỗi nhị phân trực tiếp mà không cần tìm bộ mô tả.
 
-Ví dụ: để các cặp vị trí đầu tiên là p và q. Nếu như I(p) < I(q) thì return 1, nếu không thì return 0. Điều này được áp dụng cho tất cả các cặp vị trí để có được một
-chuỗi bit n[i] chiều.
+Một điểm quan trọng là BRIEF là một bộ mô tả đặc trưng, nó không cung cấp bất kỳ phương pháp nào để tìm các đặc trưng. Vì vậy, bạn sẽ phải sử dụng bất kỳ công cụ dò tính năng nào khác như SIFT, SURF, v.v. Các bài báo khuyến nghị sử dụng CenSurE là một công cụ dò nhanh và BRIEF hoạt động tốt hơn một chút với CenSurE so với các cách khác.
 
-Điều nàyndcó thể là 128, 256 hoặc 512. OpenCV hỗ trợ tất cả những điều này, nhưng theo mặc định, nó sẽ là 256 (OpenCV biểu thị nó bằng byte. Vì vậy, các giá trị sẽ là 16, 32 và 64). Vì vậy, khi bạn nhận được điều này, bạn có thể sử dụng Khoảng cách Hamming để khớp các bộ mô tả này.
+Kết quả quả BRIEF được hiển thị dưới đây:
 
-Một điểm quan trọng là BRIEF là một bộ mô tả tính năng, nó không cung cấp bất kỳ phương pháp nào để tìm các tính năng. Vì vậy, bạn sẽ phải sử dụng bất kỳ công cụ dò tính năng nào khác như SIFT, SURF, v.v. Bài báo khuyến nghị sử dụng CenSurE là một công cụ dò nhanh và BRIEF hoạt động tốt hơn một chút cho điểm CenSurE so với điểm SURF.
-
-Tóm lại, BRIEF là một phép tính và so khớp bộ mô tả tính năng phương pháp nhanh hơn. Nó cũng cung cấp tỷ lệ nhận dạng cao trừ khi có vòng quay lớn trong mặt phẳng.
+![BRIEF](https://user-images.githubusercontent.com/81065789/152488012-3b231184-dc62-43eb-867f-24ebb9ba3681.jpg)
 
 <!-- Footer -->
 <p align='center'>Copyright © 2021 - Duong Hai Nguyen</p>
