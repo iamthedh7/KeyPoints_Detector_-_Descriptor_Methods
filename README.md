@@ -121,6 +121,7 @@ Bước 3: bước này nhằm đảm bảo rằng "Vector đặc trưng nhị p
 Bước 4: với N cặp pixel có được ở bước #2, chúng ta lần lượt so sánh cường độ của hai pixel trong từng cặp (hình 1), từ đó xây dựng vector đặc trưng N-dims (hình 2).
 
 Hình 1: ![image](https://user-images.githubusercontent.com/81065789/152501837-5be3ab16-b32a-41dd-8a04-4a184e4a80f4.png)
+
 Hình 2: ![Screenshot 2022-02-04 160749](https://user-images.githubusercontent.com/81065789/152502033-0be08f39-ba7c-4b23-ab07-d61e8f3271bc.png)
 
 Việc so sánh giữa hai "Vector đặc trưng nhị phân" cũng rất đơn giản, chúng ta sẽ sử dụng Hamming Distance để tính toán sự khác biệt giữa hai vector (hình 3).
