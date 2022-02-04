@@ -1,8 +1,8 @@
 <!-- Title -->
-<h1 align="center"><b>-- KEYPOINTS DETECTORS & DESCRIPTOR METHODS --</b></h1>
+<h1 align="left"><b>-- KEYPOINTS DETECTORS & DESCRIPTOR METHODS --</b></h1>
 
 <!-- Title -->
-<h1 align="center"><b>A/ KEYPOINTS DETECTORS ONLY:</b></h1>
+<h1 align="center"><b>A/ Keypoints Detectors Only</b></h1>
 
 # 1. HARRIS 
 
@@ -79,6 +79,12 @@ Star Feature Detector có nguồn gốc từ máy dò CenSurE. Trong khi CenSurE
 
 =====================================================================
 
+<!-- Title -->
+<h1 align="center"><b>B/ Keypoints Detectors & Descriptors</b></h1>
+
+<!-- Title -->
+<h1 align="center"><b>I/ Floating-point Descriptors</b></h1>
+
 # 4. SIFT (NON-FREE trước kia, nhưng available ở 2021)
 
 Với Harris Keypoints Detector, hình ảnh xoay cho ra kết quả tập keypoints y hệt ảnh gốc ban đầu. Nhưng còn đối với phép Scaling thì sao? Ở tỉ lệ này có 1 góc nhưng ở tỷ lệ khác có còn là 1 góc nữa hay không? 
@@ -106,6 +112,9 @@ SURF bổ sung rất nhiều tính năng để cải thiện tốc độ trong t
 Vì nó không miễn phí trong OpenCV tại thời điểm 2021 nên tôi không thể đánh giá hiệu suất và trình bày kết quả ở đây được. :(
 
 =====================================================================
+
+<!-- Title -->
+<h1 align="center"><b>II/ Binary Descriptors</b></h1>
 
 # 6. BRIEF
 
