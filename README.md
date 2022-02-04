@@ -1,8 +1,6 @@
 <!-- Title -->
 <h1 align="center"><b>-- KEYPOINTS DETECTORS & DESCRIPTOR METHODS --</b></h1>
 <h1 align="center"><b>***</b></h1>
-<h1 align="center"><b>***</b></h1>
-<h1 align="center"><b>***</b></h1>
 
 <!-- Title -->
 <h1 align="center"><b>A/ Keypoints Detectors Only</b></h1>
