@@ -76,9 +76,10 @@ Star Feature Detector có nguồn gốc từ máy dò CenSurE. Trong khi CenSurE
 
 
 <!-- Title -->
-<h1 align="center"><b>~~~~~~~</b></h1>
+<h1 align="center"><b></b></h1>
 <h1 align="center"><b>B/ Keypoints Detectors & Descriptors</b></h1>
-<h1 align="left"><b>I. Floating-point Descriptors:</b></h1>
+
+# I. Floating-point Descriptors:
 
 # 4. SIFT (NON-FREE trước kia, nhưng available ở 2021)
 
@@ -104,8 +105,7 @@ SURF bổ sung rất nhiều tính năng để cải thiện tốc độ trong t
 
 Vì nó không miễn phí trong OpenCV tại thời điểm 2021 nên tôi không thể đánh giá hiệu suất và trình bày kết quả ở đây được. :(
 
-<!-- Title -->
-<h1 align="left"><b>II. Binary Descriptors:</b></h1>
+# II. Binary Descriptors:
 
 # 6. BRIEF
 
