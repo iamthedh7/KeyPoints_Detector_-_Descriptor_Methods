@@ -117,7 +117,7 @@ BRIEF đi vào hình ảnh ngay lúc này. Nó cung cấp một lối tắt đ�
 
 Một điểm quan trọng là BRIEF là một bộ mô tả đặc trưng, nó không cung cấp bất kỳ phương pháp nào để tìm các đặc trưng. Vì vậy, bạn sẽ phải sử dụng bất kỳ công cụ dò tính năng nào khác như SIFT, SURF, v.v. Các bài báo khuyến nghị sử dụng CenSurE là một công cụ dò nhanh và BRIEF hoạt động tốt hơn một chút với CenSurE so với các cách khác.
 
-Kết quả quả BRIEF được hiển thị dưới đây:
+Kết quả của BRIEF được hiển thị dưới đây:
 
 ![BRIEF](https://user-images.githubusercontent.com/81065789/152488012-3b231184-dc62-43eb-867f-24ebb9ba3681.jpg)
 
