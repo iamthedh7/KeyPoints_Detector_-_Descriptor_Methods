@@ -16,7 +16,6 @@ def detect_corner(img, threshold=100):
     k = 0.04
 
     gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
-    gray = np.float32(gray)
 
     dest = cv2.cornerHarris(gray, blockSize, ksize, k)
     cv2.normalize(dest, dest, alpha=0, beta=255, norm_type=cv2.NORM_MINMAX)

@@ -1,7 +1,5 @@
 import cv2
-import numpy as np
 import os
-import matplotlib.pyplot as plt
 os.system('cls')
 
 def detect_corner(img):
