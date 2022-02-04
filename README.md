@@ -115,10 +115,13 @@ Chúng ta có thể sử dụng các phương pháp giảm chiều dữ liệu (
 
 BRIEF đi vào hình ảnh ngay và luôn. Nó cung cấp một lối tắt để tìm các chuỗi nhị phân trực tiếp mà không cần tìm bộ mô tả.
 
-Bước 1: chọn ra các pixel trong khu vực xung quanh keypoint;
-Bước 2: các pixel chọn được từ bước #1 sẽ được ghép thành N cặp để so sánh với nhau;
-Bước 3: bước này nhằm đảm bảo rằng "Vector đặc trưng nhị phân" không bị phụ thuộc vào góc quay của đối tượng trong bản vá (rotation invariance);
-Bước 4: với N cặp pixel có được ở bước #2, chúng ta lần lượt so sánh cường độ của hai pixel trong từng cặp (hình 1), từ đó xây dựng vector đặc trưng N-dims (hình 2).
+      Bước 1: chọn ra các pixel trong khu vực xung quanh keypoint;
+
+      Bước 2: các pixel chọn được từ bước #1 sẽ được ghép thành N cặp để so sánh với nhau;
+
+      Bước 3: bước này nhằm đảm bảo rằng "Vector đặc trưng nhị phân" không bị phụ thuộc vào góc quay của đối tượng trong bản vá (rotation invariance);
+
+      Bước 4: với N cặp pixel có được ở bước #2, chúng ta lần lượt so sánh cường độ của hai pixel trong từng cặp (hình 1), từ đó xây dựng vector đặc trưng N-dims (hình 2).
 
 Hình 1: ![image](https://user-images.githubusercontent.com/81065789/152501837-5be3ab16-b32a-41dd-8a04-4a184e4a80f4.png)
 
