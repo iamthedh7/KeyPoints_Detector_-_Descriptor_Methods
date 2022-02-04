@@ -120,7 +120,12 @@ Bước 2: các pixel chọn được từ bước #1 sẽ được ghép thành
 Bước 3: bước này nhằm đảm bảo rằng "Vector đặc trưng nhị phân" không bị phụ thuộc vào góc quay của đối tượng trong bản vá (rotation invariance);
 Bước 4: với N cặp pixel có được ở bước #2, chúng ta lần lượt so sánh cường độ của hai pixel trong từng cặp (hình 1), từ đó xây dựng vector đặc trưng N-dims (hình 2).
 
+Hình 1: ![image](https://user-images.githubusercontent.com/81065789/152501837-5be3ab16-b32a-41dd-8a04-4a184e4a80f4.png)
+Hình 2: ![Screenshot 2022-02-04 160749](https://user-images.githubusercontent.com/81065789/152502033-0be08f39-ba7c-4b23-ab07-d61e8f3271bc.png)
 
+Việc so sánh giữa hai "Vector đặc trưng nhị phân" cũng rất đơn giản, chúng ta sẽ sử dụng Hamming Distance để tính toán sự khác biệt giữa hai vector (hình 3).
+
+Hình 3: ![image](https://user-images.githubusercontent.com/81065789/152502129-7caf737f-76b2-4c77-942b-ead8f3455a48.png)
 
 Một điểm quan trọng là BRIEF là một bộ mô tả đặc trưng, nó không cung cấp bất kỳ phương pháp nào để tìm các đặc trưng. Vì vậy, bạn sẽ phải sử dụng bất kỳ công cụ dò tính năng nào khác như SIFT, SURF, v.v. Các bài báo khuyến nghị sử dụng CenSurE là một công cụ dò nhanh và BRIEF hoạt động tốt hơn một chút với CenSurE so với các cách khác.
 
