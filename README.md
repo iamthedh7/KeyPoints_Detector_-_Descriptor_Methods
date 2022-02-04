@@ -115,13 +115,20 @@ Chúng ta có thể sử dụng các phương pháp giảm chiều dữ liệu (
 
 BRIEF đi vào hình ảnh ngay và luôn. Nó cung cấp một lối tắt để tìm các chuỗi nhị phân trực tiếp mà không cần tìm bộ mô tả.
 
+Bước 1: chọn ra các pixel trong khu vực xung quanh keypoint;
+Bước 2: các pixel chọn được từ bước #1 sẽ được ghép thành N cặp để so sánh với nhau;
+Bước 3: bước này nhằm đảm bảo rằng "Vector đặc trưng nhị phân" không bị phụ thuộc vào góc quay của đối tượng trong bản vá (rotation invariance);
+Bước 4: với N cặp pixel có được ở bước #2, chúng ta lần lượt so sánh cường độ của hai pixel trong từng cặp (hình 1), từ đó xây dựng vector đặc trưng N-dims (hình 2).
+
+
+
 Một điểm quan trọng là BRIEF là một bộ mô tả đặc trưng, nó không cung cấp bất kỳ phương pháp nào để tìm các đặc trưng. Vì vậy, bạn sẽ phải sử dụng bất kỳ công cụ dò tính năng nào khác như SIFT, SURF, v.v. Các bài báo khuyến nghị sử dụng CenSurE là một công cụ dò nhanh và BRIEF hoạt động tốt hơn một chút với CenSurE so với các cách khác.
 
 Kết quả của BRIEF được hiển thị dưới đây:
 
 235 keypoints: ![BRIEF](https://user-images.githubusercontent.com/81065789/152488012-3b231184-dc62-43eb-867f-24ebb9ba3681.jpg)
 
-Nhược điểm của BRIEF là nó hoạt động dở với phép quay.
+Và không phải cái gì nhanh thì đều tốt :). BRIEF không cho độ chính xác cao bằng SIFT và SURF. Cần cân nhắc khi lựa chọn bộ mô tả đặc trưng phù hợp cho bối cảnh bài toán.
 
 ## 2. ORB:
 
@@ -132,6 +139,8 @@ ORB cũng sử dụng FAST để detect ra các keypoints sau đó dùng phép �
 Kết quả hiển thị dưới đây:
 
 500 keypoints: ![ORB](https://user-images.githubusercontent.com/81065789/152498091-ca25eabe-6fa3-4187-b9b1-28de3d36d7a6.jpg)
+
+Bài báo cho biết ORB nhanh hơn nhiều so với SURF và SIFT và bộ mô tả ORB hoạt động tốt hơn SURF. ORB là một lựa chọn tốt trong các thiết bị tiêu thụ điện năng thấp để ghép ảnh panorama,... 
 
 <!-- Footer -->
 <p align='center'>Copyright © 2021 - Duong Hai Nguyen, Thanh Trung Nguyen</p>
