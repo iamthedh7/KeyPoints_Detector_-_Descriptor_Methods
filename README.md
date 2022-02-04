@@ -72,7 +72,7 @@ Hình ảnh qua thuật toán FAST cho kết quả như sau:
 
 Star Feature Detector có nguồn gốc từ máy dò CenSurE. Trong khi CenSurE sử dụng các đa giác (như hình vuông, hình lục giác và hình bát giác) như một sự thay thế dễ tính toán hơn cho hình tròn, thì Star sử dụng hình tròn tạo bởi 2 hình vuông chồng lên nhau: 1 thẳng đứng và 1 xoay 45 độ. Các đa giác này có thể được xem như là đa giác với đường viền dày. 
 
-* Nó chỉ hoạt động ở thang màu xám *
+![STAR](https://user-images.githubusercontent.com/81065789/152470088-6c5517ee-3985-4ad0-ac74-c176c9b8fc3d.jpg)
 
 =====================================================================
 
