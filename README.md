@@ -109,7 +109,21 @@ Vì nó không miễn phí trong OpenCV tại thời điểm 2021 nên tôi khô
 
 ## 6. BRIEF
 
-Như chúng ta đã biết, SIFT sử dụng vector 128 chiều cho các bộ mô tả. Vì nó đang sử dụng số dấu phẩy động, về cơ bản nó cần 512 bytes. Tương tự, SURF cũng chiếm tối thiểu 256 byte (cho vector 64 chiều). Việc tạo một vectơ như vậy cho hàng nghìn "features" sẽ tốn rất nhiều bộ nhớ, điều này không khả thi đối với các ứng dụng hạn chế tài nguyên, đặc biệt là đối với các hệ thống nhúng. Bộ nhớ càng lớn thì thời gian matching càng lâu.
+Như chúng ta đã biết, SIFT sử dụng số dấu phẩy động nên cần sử dụng vector 128 chiều cho các bộ mô tả, tương đương 512 bytes. Tương tự, SURF cũng chiếm tối thiểu 256 byte (cho vector 64 chiều). Việc tạo một vecto như vậy cho hàng nghìn đặc trưng sẽ tốn rất nhiều bộ nhớ, điều này không khả thi đối với các ứng dụng hạn chế tài nguyên, đặc biệt là đối với các hệ thống nhúng. Bộ nhớ càng lớn thì thời gian matching càng lâu.
+
+Chúng ta có thể sử dụng các phương pháp giảm chiều dữ liệu (PCA, LDA,...) hay các phương pháp băm LSH để chuyển đổi bộ mô tả SIFT từ dạng dấu phẩy động sang dạng chuỗi nhị phân. Các chuỗi nhị phân này được sử dụng để so khớp các đặc trưng bằng cách sử dụng khoảng cách Hamming, điều này giúp tăng tốc độ tốt hơn. Nhưng với cách này, trước tiên chúng ta cần tìm các bộ mô tả, sau đó áp dụng các phương pháp băm, và điều này không giải quyết được vấn đề ban đầu của chúng ta về bộ nhớ.
+
+BRIEF đi vào hình ảnh ngay lúc này. Nó cung cấp một lối tắt để tìm các chuỗi nhị phân trực tiếp mà không cần tìm bộ mô tả. Nó có bản vá hình ảnh mượt mà và chọn một tập hợp 
+n[i](x, y) các cặp vị trí theo một cách độc nhất. Sau đó, một số so sánh cường độ pixel được thực hiện trên các cặp vị trí này. 
+
+Ví dụ: để các cặp vị trí đầu tiên là p và q. Nếu như I(p) < I(q) thì return 1, nếu không thì return 0. Điều này được áp dụng cho tất cả các cặp vị trí để có được một
+chuỗi bit n[i] chiều.
+
+Điều nàyndcó thể là 128, 256 hoặc 512. OpenCV hỗ trợ tất cả những điều này, nhưng theo mặc định, nó sẽ là 256 (OpenCV biểu thị nó bằng byte. Vì vậy, các giá trị sẽ là 16, 32 và 64). Vì vậy, khi bạn nhận được điều này, bạn có thể sử dụng Khoảng cách Hamming để khớp các bộ mô tả này.
+
+Một điểm quan trọng là BRIEF là một bộ mô tả tính năng, nó không cung cấp bất kỳ phương pháp nào để tìm các tính năng. Vì vậy, bạn sẽ phải sử dụng bất kỳ công cụ dò tính năng nào khác như SIFT, SURF, v.v. Bài báo khuyến nghị sử dụng CenSurE là một công cụ dò nhanh và BRIEF hoạt động tốt hơn một chút cho điểm CenSurE so với điểm SURF.
+
+Tóm lại, BRIEF là một phép tính và so khớp bộ mô tả tính năng phương pháp nhanh hơn. Nó cũng cung cấp tỷ lệ nhận dạng cao trừ khi có vòng quay lớn trong mặt phẳng.
 
 <!-- Footer -->
 <p align='center'>Copyright © 2021 - Duong Hai Nguyen</p>
