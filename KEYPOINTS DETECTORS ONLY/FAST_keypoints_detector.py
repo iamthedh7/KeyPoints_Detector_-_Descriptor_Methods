@@ -21,6 +21,7 @@ def detect_corner(img):
 
 
 img = cv2.imread('images\\lyly_big.jpg')
+
 ## nonmaxSuppression
 out1, kp1, _, _ = detect_corner(img)
 cv2.imwrite('result\\FAST_nonmaxSuppression.jpg', out1)
