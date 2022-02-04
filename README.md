@@ -131,7 +131,7 @@ ORB cũng sử dụng FAST để detect ra các keypoints sau đó dùng phép �
 
 Kết quả hiển thị dưới đây:
 
-500 keypoints: 
+500 keypoints: ![ORB](https://user-images.githubusercontent.com/81065789/152498091-ca25eabe-6fa3-4187-b9b1-28de3d36d7a6.jpg)
 
 <!-- Footer -->
 <p align='center'>Copyright © 2021 - Duong Hai Nguyen, Thanh Trung Nguyen</p>
