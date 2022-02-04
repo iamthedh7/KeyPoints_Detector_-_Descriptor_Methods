@@ -70,7 +70,9 @@ Hình ảnh qua thuật toán FAST cho kết quả như sau:
 
 # 3. STAR
 
-STAR là một bộ dò tính năng có nguồn gốc từ CenSurE. Tuy nhiên, không giống như CenSurE, sử dụng các đa giác như hình vuông, hình lục giác và hình bát giác để tiếp cận một vòng tròn, Star mô phỏng một vòng tròn với 2 hình vuông chồng lên nhau: 1 thẳng đứng và 1 xoay 45 độ. Các đa giác này là hai cấp. Chúng có thể được xem như đa giác với đường viền dày. Các đường viền và khu vực được bao bọc có trọng lượng của các dấu hiệu đối lập. Điều này có các đặc điểm tính toán tốt hơn so với các máy dò không gian quy mô khác và nó có khả năng thực hiện theo thời gian thực. Trái ngược với SIFT và SURF, tìm điểm cực trị ở các pixel được lấy mẫu phụ làm ảnh hưởng đến độ chính xác ở các tỷ lệ lớn hơn, CenSurE tạo ra một vectơ đặc trưng bằng cách sử dụng độ phân giải không gian đầy đủ ở tất cả các tỷ lệ trong kim tự tháp.
+Star Feature Detector có nguồn gốc từ máy dò CenSurE. Trong khi CenSurE sử dụng các đa giác (như hình vuông, hình lục giác và hình bát giác) như một sự thay thế dễ tính toán hơn cho hình tròn, thì Star sử dụng hình tròn tạo bởi 2 hình vuông chồng lên nhau: 1 thẳng đứng và 1 xoay 45 độ. Các đa giác này có thể được xem như là đa giác với đường viền dày. 
+
+* Nó chỉ hoạt động ở thang màu xám *
 
 =====================================================================
 
