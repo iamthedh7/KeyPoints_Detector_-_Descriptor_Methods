@@ -1,6 +1,9 @@
 <!-- Title -->
 <h1 align="center"><b>-- KEYPOINTS DETECTORS & DESCRIPTOR METHODS --</b></h1>
 
+<!-- Title -->
+<h1 align="center"><b>A/ KEYPOINTS DETECTORS ONLY:</b></h1>
+
 # 1. HARRIS 
 
 Harris là một thuật toán phát hiện góc sử dụng trong Thị giác máy tính được giới thiệu lần đầu vào 1988. Kể từ đó, nó đã được cải tiến và áp dụng trong nhiều thuật toán để tiền xử lý hình ảnh cho các ứng dụng tiếp theo. Cùng tìm hiểu xem nó hoạt động như thế nào ?
