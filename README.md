@@ -5,7 +5,7 @@
 <!-- Title -->
 <h1 align="center"><b>A/ Keypoints Detectors Only</b></h1>
 
-      BÀI NGHIÊN CỨU NÀY BAO GỒM NHỮNG THUẬT TOÁN NHƯ SAU:
+        BÀI NGHIÊN CỨU NÀY BAO GỒM NHỮNG THUẬT TOÁN NHƯ SAU:
 
 	KEYPOINTS DETECTORS ONLY: HARRIS, FAST, STAR
       
