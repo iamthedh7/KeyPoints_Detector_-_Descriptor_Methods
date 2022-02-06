@@ -99,23 +99,29 @@ Với SIFT, 2 hình với 2 tỉ lệ khác nhau sẽ cho ra 1 tập keypoints k
 
 Chúng ta dùng SIFT để phát hiện và mô tả keypoints nhưng tốc độ của nó tương đối chậm vì sử dụng vector **128 chiều** cho bộ mô tả, người ta cần một phiên bản nâng cấp hơn, vì thế, vào năm 2006, SURF ra đời, cải thiện tốc độ cho SIFT.
 
+(use Euclide distance to matching)
+
 ## 2. SURF (NON-FREE ở 2021)
 
 SURF bổ sung rất nhiều tính năng để cải thiện tốc độ trong từng bước thực hiện, do đó nó nhanh hơn SIFT. Bộ mô tả của SURF sử dụng 1 vector **64 chiều** thay vì 128 như SIFT. Phân tích cho thấy nó nhanh hơn _3 lần_ so với SIFT trong khi hiệu suất tương đương với SIFT. SURF xử lý tốt hình ảnh bị mờ và xoay, nhưng không tốt trong việc xử lý thay đổi điểm nhìn và thay đổi độ sáng.
 
 Vì nó không miễn phí trong OpenCV tại thời điểm 2021 nên tôi không thể đánh giá hiệu suất và trình bày kết quả ở đây được. :(
 
+(use Euclide distance to matching)
+
 # II. Binary Descriptors:
 
 ## 1. BRIEF
 
-Như chúng ta đã biết, SIFT sử dụng số dấu phẩy động nên cần sử dụng vector 128 chiều cho các bộ mô tả, tương đương 512 bytes. Tương tự, SURF cũng chiếm tối thiểu 256 bytes (cho vector 64 chiều). Việc tạo một vecto như vậy cho hàng nghìn đặc trưng sẽ tốn rất nhiều bộ nhớ, điều này không khả thi đối với các ứng dụng hạn chế tài nguyên, đặc biệt là đối với các hệ thống nhúng. Bộ nhớ càng lớn thì thời gian matching càng lâu.
+Như chúng ta đã biết, SIFT sử dụng số dấu phẩy động nên cần sử dụng vector 128 chiều để mô tả cho 1 keypoint, tương đương 512 bytes. Tương tự, SURF cũng chiếm tối thiểu 256 bytes (cho vector 64 chiều). Việc tạo một vector như vậy cho hàng nghìn keypoints sẽ tốn rất nhiều bộ nhớ, điều này không khả thi đối với các ứng dụng hạn chế tài nguyên, đặc biệt là đối với các hệ thống nhúng. Bộ nhớ càng lớn thì thời gian matching càng lâu.
 
 Chúng ta có thể sử dụng các phương pháp giảm chiều dữ liệu (PCA, LDA,...) hay các phương pháp băm LSH để chuyển đổi bộ mô tả SIFT từ dạng dấu phẩy động sang dạng chuỗi nhị phân. Các chuỗi nhị phân này được sử dụng để so khớp các đặc trưng bằng cách sử dụng khoảng cách Hamming, điều này giúp tăng tốc độ tốt hơn. Nhưng với cách này, trước tiên chúng ta cần tìm các bộ mô tả, sau đó áp dụng các phương pháp băm, và điều này không giải quyết được vấn đề ban đầu của chúng ta về bộ nhớ.
 
 BRIEF đi vào hình ảnh ngay và luôn. Nó cung cấp một lối tắt để tìm các chuỗi nhị phân trực tiếp mà không cần tìm bộ mô tả.
 
-      Bước 1: chọn ra các pixel trong khu vực xung quanh keypoint;
+      Bước 0: giả sử đã xác định được K keypoints;
+
+      Bước 1: chọn ra (ngẫu nhiên) các pixel trong khu vực xung quanh từng keypoint đã xác định;
 
       Bước 2: các pixel chọn được từ bước #1 sẽ được ghép thành N cặp để so sánh với nhau;
 
@@ -127,7 +133,7 @@ Hình 1: ![image](https://user-images.githubusercontent.com/81065789/152501837-5
 
 Hình 2: ![Screenshot 2022-02-04 160749](https://user-images.githubusercontent.com/81065789/152502033-0be08f39-ba7c-4b23-ab07-d61e8f3271bc.png)
 
-Việc so sánh giữa hai "Vector đặc trưng nhị phân" cũng rất đơn giản, chúng ta sẽ sử dụng Hamming Distance để tính toán sự khác biệt giữa hai vector (hình 3).
+Khi Matching, việc so sánh giữa hai "Vector đặc trưng nhị phân" cũng rất đơn giản, chúng ta sẽ sử dụng Hamming Distance để tính toán sự khác biệt giữa hai vector (hình 3).
 
 Hình 3: ![image](https://user-images.githubusercontent.com/81065789/152502129-7caf737f-76b2-4c77-942b-ead8f3455a48.png)
 
@@ -139,7 +145,9 @@ Kết quả của BRIEF được hiển thị dưới đây:
 
 Và không phải cái gì nhanh thì đều tốt :). BRIEF không cho độ chính xác cao bằng SIFT và SURF. Cần cân nhắc khi lựa chọn bộ mô tả đặc trưng phù hợp cho bối cảnh bài toán.
 
-## 2. ORB:
+(use Hamming distance to matching)
+
+## 2. ORB
 
 Thuật toán này được đưa ra bởi **Ethan Rublee, Vincent Rabaud, Kurt Konolige và Gary R. Bradski** trong bài báo của họ: "ORB: Một giải pháp thay thế hiệu quả cho SIFT hoặc SURF" vào năm 2011. Như tiêu đề đã nói, nó là một giải pháp thay thế tốt cho SIFT và SURF trong tính toán chi phí, hiệu suất phù hợp cho matching và chủ yếu là vấn đề bằng sáng chế, trong khi SIFT và SURF đã được cấp bằng sáng chế và bạn phải trả tiền cho họ để sử dụng nó. Nhưng ORB thì không!
 
@@ -150,6 +158,14 @@ Kết quả hiển thị dưới đây:
 500 keypoints: ![ORB](https://user-images.githubusercontent.com/81065789/152498091-ca25eabe-6fa3-4187-b9b1-28de3d36d7a6.jpg)
 
 Bài báo cho biết ORB nhanh hơn nhiều so với SURF và SIFT và bộ mô tả ORB hoạt động tốt hơn SURF. ORB là một lựa chọn tốt trong các thiết bị tiêu thụ điện năng thấp để ghép ảnh panorama,... 
+
+(use Euclide distance to matching)
+
+## 3. BRISK
+
+BRIEF hoặc ORB đều chọn các pixel xung quanh keypoint một cách ngẫu nhiên, nhưng với BRISK thì xác định trước. Các pixel được lấy mẫu nằm trên các vòng đồng tâm. Đối với mỗi điểm lấy mẫu (keypoint), một bản vá nhỏ được xem xét xung quanh nó. Trước khi bắt đầu thuật toán, bản vá được làm mịn bằng cách làm mịn Gaussian.
+
+
 
 <!-- Footer -->
 <p align='center'>Copyright © 2021 - Duong Hai Nguyen, Thanh Trung Nguyen</p>
