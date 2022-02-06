@@ -77,7 +77,7 @@ Star Feature Detector có nguồn gốc từ máy dò CenSurE. Trong khi CenSurE
 
 <!-- Title -->
 <h1 align="center"><b></b></h1>
-<h1 align="center"><b>B/ Keypoints Detectors & Descriptors</b></h1>
+<h1 align="center"><b>B/ Keypoints Descriptors</b></h1>
 
 # I. Floating-point Descriptors:
 
