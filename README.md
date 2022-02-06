@@ -5,6 +5,23 @@
 <!-- Title -->
 <h1 align="center"><b>A/ Keypoints Detectors Only</b></h1>
 
+      BÀI NGHIÊN CỨU NÀY BAO GỒM NHỮNG THUẬT TOÁN NHƯ SAU:
+
+	KEYPOINTS DETECTORS ONLY: HARRIS, FAST, STAR
+      
+	KEYPOINTS DESCRIPTORS:
+      
+            •	FLOATING-POINTS DESCRIPTORS
+                        SIFT    *  (having own keypoints detector)
+                        SURF    *  (having own keypoints detector)
+                        
+            •	BINARY DESCRIPTORS
+                        BRIEF   *  (using others keypoints detector)
+                        ORB	  *  (having own keypoints detector)
+                        BRISK   *  (having own keypoints detector)
+                        FREAK   *  (using others keypoints detector)
+
+
 ## 1. HARRIS 
 
 Harris là một thuật toán phát hiện góc sử dụng trong Thị giác máy tính được giới thiệu lần đầu vào 1988. Kể từ đó, nó đã được cải tiến và áp dụng trong nhiều thuật toán để tiền xử lý hình ảnh cho các ứng dụng tiếp theo. Cùng tìm hiểu xem nó hoạt động như thế nào ?
