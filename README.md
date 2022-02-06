@@ -111,23 +111,15 @@ Vì nó không miễn phí trong OpenCV tại thời điểm 2021 nên tôi khô
 
 # II. Binary Descriptors:
 
-- Bộ mô tả nhị phân bao gồm ba phần:
+- Bộ mô tả nhị phân bao gồm 4 phần:
 
-+ Giai đoạn lấy mẫu: nơi lấy mẫu các điểm trong vùng xung quanh keypoints.
++ Sampling pattern (Lấy mẫu): chọn ra các pixel trong khu vực xung quanh keypoint, mỗi Binary Descriptor có một phương pháp để chọn ra các pixel này;
 
-+ Giai đoạn bù định hướng: một số cơ chế để đo hướng của điểm chính và xoay nó để bù cho những thay đổi xoay.
++ Sampling pairs (Ghép cặp): các pixel chọn được từ bước #1 sẽ được ghép thành N cặp để so sánh với nhau;
 
-+ Giai đoạn đối sánh mẫu: những cặp nào cần so sánh khi xây dựng bộ mô tả cuối cùng.
++ Orientation compensation: bước này nhằm đảm bảo rằng Binary Feature Vector không bị phụ thuộc vào góc quay của đối tượng trong Image Patch (rotation invariance);
 
-## 1. BRIEF
-
-Như chúng ta đã biết, SIFT sử dụng số dấu phẩy động nên cần sử dụng vector 128 chiều để mô tả cho 1 keypoint, tương đương 512 bytes. Tương tự, SURF cũng chiếm tối thiểu 256 bytes (cho vector 64 chiều). Việc tạo một vector như vậy cho hàng nghìn keypoints sẽ tốn rất nhiều bộ nhớ, điều này không khả thi đối với các ứng dụng hạn chế tài nguyên, đặc biệt là đối với các hệ thống nhúng. Bộ nhớ càng lớn thì thời gian matching càng lâu.
-
-Chúng ta có thể sử dụng các phương pháp giảm chiều dữ liệu (PCA, LDA,...) hay các phương pháp băm LSH để chuyển đổi bộ mô tả SIFT từ dạng dấu phẩy động sang dạng chuỗi nhị phân. Các chuỗi nhị phân này được sử dụng để so khớp các đặc trưng bằng cách sử dụng khoảng cách Hamming, điều này giúp tăng tốc độ tốt hơn. Nhưng với cách này, trước tiên chúng ta cần tìm các bộ mô tả, sau đó áp dụng các phương pháp băm, và điều này không giải quyết được vấn đề ban đầu của chúng ta về bộ nhớ.
-
-BRIEF đi vào hình ảnh ngay và luôn. Nó cung cấp một lối tắt để tìm các chuỗi nhị phân trực tiếp mà không cần tìm bộ mô tả. Nôm na, BRIEF hoạt động như sau:
-
-_Giả sử đã xác định được K keypoints. Đầu tiên, thuật toán sẽ chọn ra (ngẫu nhiên) i pixels trong khu vực xung quanh từng keypoint đã xác định. Tiếp theo, các chuỗi pixel của từng keypoint chọn được từ bước #1 sẽ được ghép thành N cặp để so sánh với nhau. Sau đó, giai đoạn bù định hướng sẽ diễn ra. Và rồi, với N cặp pixel có được ở bước #2, chúng ta lần lượt so sánh cường độ của hai pixel trong từng cặp (hình 1), từ đó xây dựng vector đặc trưng N-dims (hình 2)._
++ Binary feature vector construction (Xây dựng vector đặc trưng): với N cặp pixel có được ở bước #2, chúng ta lần lượt so sánh cường độ của hai pixel v_1, v_2 trong từng cặp (hình 1), từ đó xây dựng vector đặc trưng N-dims (hình 2).
 
 Hình 1: ![image](https://user-images.githubusercontent.com/81065789/152501837-5be3ab16-b32a-41dd-8a04-4a184e4a80f4.png)
 
@@ -137,9 +129,27 @@ Khi Matching, việc so sánh giữa hai "Vector đặc trưng nhị phân" cũn
 
 Hình 3: ![image](https://user-images.githubusercontent.com/81065789/152502129-7caf737f-76b2-4c77-942b-ead8f3455a48.png)
 
+_Note: Image path (bản vá hình ảnh)_
+
+![image](https://user-images.githubusercontent.com/81065789/152671918-a2f30787-b3a1-4893-a487-887a8ccc6cfb.png)
+
+## 1. BRIEF
+
+Như chúng ta đã biết, SIFT sử dụng số dấu phẩy động nên cần sử dụng vector 128 chiều cho bộ mô tả, tương đương 512 bytes. Tương tự, SURF cũng chiếm tối thiểu 256 bytes (cho vector 64 chiều). Việc tạo một vector như vậy cho hàng nghìn đặc trưng sẽ tốn rất nhiều bộ nhớ, điều này không khả thi đối với các ứng dụng hạn chế tài nguyên, đặc biệt là đối với các hệ thống nhúng. Bộ nhớ càng lớn thì thời gian matching càng lâu.
+
+Chúng ta có thể sử dụng các phương pháp giảm chiều dữ liệu (PCA, LDA,...) hay các phương pháp băm LSH để chuyển đổi bộ mô tả SIFT từ dạng dấu phẩy động sang dạng chuỗi nhị phân. Các chuỗi nhị phân này được sử dụng để so khớp các đặc trưng bằng cách sử dụng khoảng cách Hamming, điều này giúp tăng tốc độ tốt hơn. Nhưng với cách này, trước tiên chúng ta cần tìm các bộ mô tả, sau đó áp dụng các phương pháp băm, và điều này không giải quyết được vấn đề ban đầu của chúng ta về bộ nhớ.
+
+BRIEF đi vào hình ảnh ngay và luôn. Nó cung cấp một lối tắt để tìm các chuỗi nhị phân trực tiếp mà không cần tìm bộ mô tả. Nôm na, BRIEF hoạt động như sau:
+
+_Giả sử đã xác định được K keypoints. Đầu tiên, thuật toán sẽ chọn ra i pixels trong khu vực xung quanh từng keypoint đã xác định. Tiếp theo, các chuỗi pixel của từng keypoint chọn được từ bước #1 sẽ được ghép thành N cặp để so sánh với nhau. Sau đó, giai đoạn bù định hướng sẽ diễn ra. Và rồi, với N cặp pixel có được ở bước #2, chúng ta lần lượt so sánh cường độ của hai pixel trong từng cặp (hình 1), từ đó xây dựng vector đặc trưng N-dims (hình 2)._
+
+BRIEF descriptor thực hiện sampling pattern một cách ngẫu nhiên với 'Gaussian distribution', nghĩa là các pixel càng gần keypoint sẽ có xác suất được lựa chọn cao hơn các pixel ở xa. Từ các pixel này chúng ta chọn ra N cặp để so sánh và xây dựng Vector đặc trưng.
+
 Một điểm quan trọng là BRIEF là một bộ mô tả đặc trưng, nó không cung cấp bất kỳ phương pháp nào để tìm các đặc trưng. Vì vậy, chúng ta sẽ phải sử dụng bất kỳ công cụ dò tính năng nào khác như SIFT, SURF, v.v. Các bài báo khuyến nghị sử dụng CenSurE là một công cụ dò nhanh và BRIEF hoạt động tốt hơn một chút với CenSurE so với các cách khác.
 
 Và không phải cái gì nhanh thì đều tốt :). BRIEF không cho độ chính xác cao bằng SIFT và SURF. Cần cân nhắc khi lựa chọn bộ mô tả đặc trưng phù hợp cho bối cảnh bài toán.
+
+Theo tiêu chuẩn, vector đặc trưng của từng keypoint của ORB descriptor kích thước 256-dims, được lưu trữ ở 32 bytes.
 
 (use Hamming distance to matching)
 
@@ -149,7 +159,13 @@ Thuật toán này được đưa ra bởi **Ethan Rublee, Vincent Rabaud, Kurt 
 
 ORB cũng sử dụng FAST để detect ra các keypoints sau đó dùng phép đo góc Harris để tìm N điểm cao nhất trong số đó và dùng BRIEF để mô tả các đặc trưng. Tuy nhiên, FAST và BRIEF được nhóm tác giả tinh chỉnh lại để khắc phục nhược điểm không bất biến với những thay đổi xoay của phiên bản nguyên bản.
 
+ORB descriptor thực hiện sampling pattern với một thuật toán Machine Learning, chúng ta sẽ không đi sâu tìm hiểu về thuật toán này.
+
+Với orientation angle, chúng ta có thể xoay các image patch về một góc đồng nhất, nhờ đó mà các image patch có góc quay khác nhau vẫn được xử lý tương tự nhau.
+
 Bài báo cho biết ORB nhanh hơn nhiều so với SURF và SIFT và bộ mô tả ORB hoạt động tốt hơn SURF. ORB là một lựa chọn tốt trong các thiết bị tiêu thụ điện năng thấp để ghép ảnh panorama,... 
+
+Theo tiêu chuẩn, vector đặc trưng của từng keypoint của ORB descriptor kích thước 256-dims, được lưu trong 32 bytes.
 
 (use Hamming distance to matching)
 
@@ -168,6 +184,8 @@ Một số nghiên cứu và thực nghiệm đã đưa ra nhận xét như sau:
 * BRIEF vượt trội hơn BRISK (và ORB) trong các thay đổi về trắc quang - làm mờ, thay đổi độ sáng và nén JPEG.
 
 * BRISK vượt trội hơn một chút so với BRIEF về thay đổi góc nhìn, nhưng về tổng thể thì hoạt động tương tự như ORB.
+
+Theo tiêu chuẩn, vector đặc trưng của BRISK descriptor có kích thước 512-dims, được lưu trong 64 bytes.
 
 (use Hamming distance to matching)
 
