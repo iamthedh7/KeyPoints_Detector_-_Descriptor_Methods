@@ -145,7 +145,7 @@ _Giả sử đã xác định được K keypoints. Đầu tiên, thuật toán 
 
 BRIEF descriptor thực hiện sampling pattern một cách ngẫu nhiên với 'Gaussian distribution', nghĩa là các pixel càng gần keypoint sẽ có xác suất được lựa chọn cao hơn các pixel ở xa. Từ các pixel này chúng ta chọn ra N cặp để so sánh và xây dựng Vector đặc trưng.
 
-Một điểm quan trọng là BRIEF là một bộ mô tả đặc trưng, nó không cung cấp bất kỳ phương pháp nào để tìm các đặc trưng. Vì vậy, chúng ta sẽ phải sử dụng bất kỳ công cụ dò tính năng nào khác như SIFT, SURF, v.v. Các bài báo khuyến nghị sử dụng CenSurE là một công cụ dò nhanh và BRIEF hoạt động tốt hơn một chút với CenSurE so với các cách khác.
+Một điểm quan trọng là BRIEF là một bộ mô tả đặc trưng, nó không cung cấp bất kỳ phương pháp nào để tìm các đặc trưng. Vì vậy, chúng ta sẽ phải sử dụng bất kỳ công cụ dò tính năng nào khác như SIFT, SURF, v.v. Các bài báo khuyến nghị sử dụng STAR (CenSurE) là một công cụ dò nhanh và BRIEF hoạt động tốt hơn một chút so với các cách khác.
 
 Và không phải cái gì nhanh thì đều tốt :). BRIEF không cho độ chính xác cao bằng SIFT và SURF. Cần cân nhắc khi lựa chọn bộ mô tả đặc trưng phù hợp cho bối cảnh bài toán.
 
@@ -208,6 +208,8 @@ FREAK áp dụng một thuật toán Machine Learning (tương tự như ORB des
 ![image](https://user-images.githubusercontent.com/81065789/152672047-a1526774-728f-44b8-90aa-7d49633aa60f.png)
 
 Sau cùng, cường độ của các pixel được so sánh và xây dựng thành Vector đặc trưng.
+
+FREAK chỉ là một bộ mô tả đặc trưng, nên phải kết hợp với một bộ dò keypoints khác. Ở trong code phần này đã chọn STAR làm bộ dò điểm chính cho FREAK.
 
 Theo tiêu chuẩn, vector đặc trưng của BRISK descriptor có kích thước 512-dims, được lưu trong 64 bytes.
 
