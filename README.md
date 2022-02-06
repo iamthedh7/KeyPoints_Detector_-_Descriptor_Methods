@@ -139,10 +139,6 @@ Hình 3: ![image](https://user-images.githubusercontent.com/81065789/152502129-7
 
 Một điểm quan trọng là BRIEF là một bộ mô tả đặc trưng, nó không cung cấp bất kỳ phương pháp nào để tìm các đặc trưng. Vì vậy, chúng ta sẽ phải sử dụng bất kỳ công cụ dò tính năng nào khác như SIFT, SURF, v.v. Các bài báo khuyến nghị sử dụng CenSurE là một công cụ dò nhanh và BRIEF hoạt động tốt hơn một chút với CenSurE so với các cách khác.
 
-Kết quả của BRIEF được hiển thị dưới đây:
-
-235 keypoints: ![BRIEF](https://user-images.githubusercontent.com/81065789/152488012-3b231184-dc62-43eb-867f-24ebb9ba3681.jpg)
-
 Và không phải cái gì nhanh thì đều tốt :). BRIEF không cho độ chính xác cao bằng SIFT và SURF. Cần cân nhắc khi lựa chọn bộ mô tả đặc trưng phù hợp cho bối cảnh bài toán.
 
 (use Hamming distance to matching)
@@ -152,10 +148,6 @@ Và không phải cái gì nhanh thì đều tốt :). BRIEF không cho độ ch
 Thuật toán này được đưa ra bởi **Ethan Rublee, Vincent Rabaud, Kurt Konolige và Gary R. Bradski** trong bài báo của họ: "ORB: Một giải pháp thay thế hiệu quả cho SIFT hoặc SURF" vào năm 2011. Như tiêu đề đã nói, nó là một giải pháp thay thế tốt cho SIFT và SURF trong tính toán chi phí, hiệu suất phù hợp cho matching và chủ yếu là vấn đề bằng sáng chế, trong khi SIFT và SURF đã được cấp bằng sáng chế và bạn phải trả tiền cho họ để sử dụng nó. Nhưng ORB thì không!
 
 ORB cũng sử dụng FAST để detect ra các keypoints sau đó dùng phép đo góc Harris để tìm N điểm cao nhất trong số đó và dùng BRIEF để mô tả các đặc trưng. Tuy nhiên, FAST và BRIEF được nhóm tác giả tinh chỉnh lại để khắc phục nhược điểm không bất biến với những thay đổi xoay của phiên bản nguyên bản.
-
-Kết quả hiển thị dưới đây:
-
-500 keypoints: ![ORB](https://user-images.githubusercontent.com/81065789/152498091-ca25eabe-6fa3-4187-b9b1-28de3d36d7a6.jpg)
 
 Bài báo cho biết ORB nhanh hơn nhiều so với SURF và SIFT và bộ mô tả ORB hoạt động tốt hơn SURF. ORB là một lựa chọn tốt trong các thiết bị tiêu thụ điện năng thấp để ghép ảnh panorama,... 
 
