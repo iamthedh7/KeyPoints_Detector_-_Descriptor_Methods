@@ -17,7 +17,7 @@
                         
             •	BINARY DESCRIPTORS
                         BRIEF   *  (using others keypoints detector)
-                        ORB	  *  (having own keypoints detector)
+                        ORB	*  (having own keypoints detector)
                         BRISK   *  (having own keypoints detector)
                         FREAK   *  (using others keypoints detector)
 
