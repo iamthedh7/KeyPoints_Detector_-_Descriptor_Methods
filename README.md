@@ -189,5 +189,35 @@ Theo tiêu chuẩn, vector đặc trưng của BRISK descriptor có kích thư�
 
 (use Hamming distance to matching)
 
+## 4. FREAK
+
+FREAK descriptor rất đặc biệt vì nó mô phỏng cấu trúc tế bào của võng mạc để thực hiện sampling pattern.
+
+![image](https://user-images.githubusercontent.com/81065789/152671970-cf7b95f0-5613-4f82-99b7-7a2b8a5f6b50.png)
+
+Theo đó, các tế bào trên võng mạc được phân bố dày đặc hơn về phía trung tâm. FREAK descriptor thực hiện sampling pattern với mẫu hình sau:
+
+![image](https://user-images.githubusercontent.com/81065789/152671978-f4c4ba2b-391e-4f76-be39-0a1529a64085.png)
+
+Chúng ta có thể thấy rằng tại khu vực xung quanh keypoint, các đường tròn chồng lấn nhau được xây dựng và tập trung dày đặc hơn về phía trung tâm với kích thước nhỏ dần.
+
+FREAK áp dụng một thuật toán Machine Learning (tương tự như ORB descriptor) để thực hiện sampling pairs và thu được 512 cặp pixels.
+
+Để xác định góc định hướng của image patch, FREAK descriptor tính toán các giá trị dựa trên 45 cặp pixel đối xứng.
+
+![image](https://user-images.githubusercontent.com/81065789/152672047-a1526774-728f-44b8-90aa-7d49633aa60f.png)
+
+Sau cùng, cường độ của các pixel được so sánh và xây dựng thành Vector đặc trưng.
+
+Theo tiêu chuẩn, vector đặc trưng của BRISK descriptor có kích thước 512-dims, được lưu trong 64 bytes.
+
+(use Hamming distance to matching)
+
+      Trong 4 bộ descriptor đã tìm hiểu ở trên thì FREAK cho kết quả tốt nhất, tiếp theo là BRISK và ORB (và BRIEF). Trên thực tế, chúng ta sẽ cần thử nghiệm trên từng descriptor để chọn ra descriptor phù hợp nhất bộ dữ liệu đang có.
+      
+Code thực hiện của từng thuật toán trình bày ở trên đều có phần Matching được commented ở sau cùng, và phần kết quả của các Keypoint detectors được lưu lại trong thư mục 'result', hình ảnh sử dụng trong code được lưu ở thư mục 'images'.
+
+<h1 align="center"><b></b></h1>
+
 <!-- Footer -->
 <p align='center'>Copyright © 2021 - Duong Hai Nguyen, Thanh Trung Nguyen</p>
