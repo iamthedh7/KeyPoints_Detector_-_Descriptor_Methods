@@ -217,7 +217,7 @@ Theo tiêu chuẩn, vector đặc trưng của BRISK descriptor có kích thư�
       
 Code thực hiện của từng thuật toán trình bày ở trên đều có phần Matching được commented ở sau cùng, và phần kết quả của các Keypoint detectors được lưu lại trong thư mục 'result', hình ảnh sử dụng trong code được lưu ở thư mục 'images'.
 
-<h1 align="center"><b>~~~~~~~</b></h1>
+<h1 align="center"><b>--------</b></h1>
 
 <!-- Footer -->
 <p align='center'>Copyright © 2021 - Duong Hai Nguyen, Thanh Trung Nguyen</p>
