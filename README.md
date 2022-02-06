@@ -151,7 +151,7 @@ ORB cũng sử dụng FAST để detect ra các keypoints sau đó dùng phép �
 
 Bài báo cho biết ORB nhanh hơn nhiều so với SURF và SIFT và bộ mô tả ORB hoạt động tốt hơn SURF. ORB là một lựa chọn tốt trong các thiết bị tiêu thụ điện năng thấp để ghép ảnh panorama,... 
 
-(use Euclide distance to matching)
+(use Hamming distance to matching)
 
 ## 3. BRISK
 
@@ -168,6 +168,8 @@ Một số nghiên cứu và thực nghiệm đã đưa ra nhận xét như sau:
 * BRIEF vượt trội hơn BRISK (và ORB) trong các thay đổi về trắc quang - làm mờ, thay đổi độ sáng và nén JPEG.
 
 * BRISK vượt trội hơn một chút so với BRIEF về thay đổi góc nhìn, nhưng về tổng thể thì hoạt động tương tự như ORB.
+
+(use Hamming distance to matching)
 
 <!-- Footer -->
 <p align='center'>Copyright © 2021 - Duong Hai Nguyen, Thanh Trung Nguyen</p>
