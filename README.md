@@ -7,19 +7,19 @@
 
 	BÀI NGHIÊN CỨU NÀY BAO GỒM:
 	
-	KEYPOINTS DETECTORS ONLY: HARRIS, FAST, STAR
-      
-	KEYPOINTS DESCRIPTORS:
-      
-            •	FLOATING-POINTS DESCRIPTORS
-				SIFT (having own keypoints detector)
-				SURF (having own keypoints detector)
-                        
-            •	BINARY DESCRIPTORS
-				BRIEF (using others keypoints detector)
-				ORB   (having own keypoints detector)
-				BRISK (having own keypoints detector)
-				FREAK (using others keypoints detector)
+		KEYPOINTS DETECTORS ONLY: HARRIS, FAST, STAR
+
+		KEYPOINTS DESCRIPTORS:
+
+		    •	FLOATING-POINTS DESCRIPTORS
+					SIFT (having own keypoints detector)
+					SURF (having own keypoints detector)
+
+		    •	BINARY DESCRIPTORS
+					BRIEF (using others keypoints detector)
+					ORB   (having own keypoints detector)
+					BRISK (having own keypoints detector)
+					FREAK (using others keypoints detector)
 
 
 ## 1. HARRIS 
