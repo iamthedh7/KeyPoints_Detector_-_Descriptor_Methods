@@ -44,6 +44,12 @@ Sau khi ma trận M được định nghĩa, chúng ta sẽ sử dụng công th
 
 ![image](https://user-images.githubusercontent.com/81065789/148053429-2dcdf575-42b3-4160-8b9f-7f5659e8badf.png)
 
+* det(M)=λ1λ2
+
+* trace(M)=λ1+λ2
+
+* Với λ1 and λ2 là 2 trị riêng (eigenvalues) của ma trận M.
+
 Sau đó, chúng ta có thể xem xét điều kiện sau:
 
       - Nếu |R| nhỏ thì đây là một khu vực phẳng, có nghĩa là không phải keypoint
