@@ -44,11 +44,7 @@ Sau khi ma trận M được định nghĩa, chúng ta sẽ sử dụng công th
 
 ![image](https://user-images.githubusercontent.com/81065789/148053429-2dcdf575-42b3-4160-8b9f-7f5659e8badf.png)
 
-Với: det(M)=λ1λ2
-
-     trace(M)=λ1+λ2
-     
-     λ1 and λ2 are the eigenvalues of M
+Với:  det(M)=λ1λ2, trace(M)=λ1+λ2, λ1 and λ2 are the eigenvalues of M
 
 Sau đó, chúng ta có thể xem xét điều kiện sau:
 
